@@ -8,7 +8,6 @@ import {
   FormControlLabel,
   Button,
   Typography,
-  Link,
 } from "@mui/material";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -19,21 +18,22 @@ import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOu
 const SignUp = () => {
   const paperStyle = {
     padding: 20,
-    height: "95vh",
+    height: "91vh",
     width: 300,
-    margin: "50px auto",
+    margin: "0 auto",
+    backgroundColor: "#CBD6E5",
   };
   const avatarStyle = {
-    backgroundColor: "#1bbd7e",
+    backgroundColor: "#5B6BAA",
   };
 
   const btstyle = {
     margin: "8px 0",
     color: "#FFFFFF",
-    backgroundColor: "#12824C",
+    backgroundColor: "#5B6BAA",
   };
   const radioStyle = {
-    color: "#12824C",
+    color: "#5B6BAA",
   };
   const formControlStyle = {
     marginTop: 5,
@@ -42,16 +42,20 @@ const SignUp = () => {
     paddingTop: 10,
   };
 
-  const preventDefault = (event) => event.preventDefault();
+  const headingStyle = {
+    color: "#3A396B",
+    fontWeight: "bold"
+  };
+
   return (
     <>
       <Grid>
-        <Paper elevation={20} style={paperStyle}>
+        <Paper style={paperStyle}>
           <Grid align="center">
             <Avatar style={avatarStyle}>
               <AddCircleOutlineOutlinedIcon />
             </Avatar>
-            <h2>Sign Up</h2>
+            <h2 style={headingStyle}>Sign Up</h2>
             <Typography variant="caption" gutterBottom>
               Please fill this form to create an account!!
             </Typography>
@@ -103,7 +107,7 @@ const SignUp = () => {
               placeholder="Enter Your Phone Number"
               fullWidth
               required
-              type="number"
+              type="text"
             />
             <TextField
               id="standard-basic"
