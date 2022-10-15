@@ -17,32 +17,38 @@ const Login = () => {
     padding: 20,
     height: "70vh",
     width: 300,
-    margin: "100px auto",
+    margin: "0 auto",
+    backgroundColor: "#CBD6E5",
   };
   const avatarStyle = {
-    backgroundColor: "#1bbd7e",
+    backgroundColor: "#5B6BAA",
   };
 
   const btstyle = {
     margin: "8px 0",
     color: "#FFFFFF",
-    backgroundColor: "#12824C",
+    backgroundColor: "#5B6BAA",
   };
 
   const checkBoxStyle = {
-    color: "#12824C",
+    color: "#5B6BAA",
+  };
+
+  const headingStyle = {
+    color: "#3A396B",
+    fontWeight: "bold"
   };
   const preventDefault = (event) => event.preventDefault();
 
   return (
     <>
       <Grid>
-        <Paper elevation={10} style={paperStyle}>
+        <Paper style={paperStyle}>
           <Grid align="center">
             <Avatar style={avatarStyle}>
               <LockOutlinedIcon />
             </Avatar>
-            <h2>Sign In</h2>
+            <h2 style={headingStyle}>Sign In</h2>
           </Grid>
           <form action="">
             <TextField
