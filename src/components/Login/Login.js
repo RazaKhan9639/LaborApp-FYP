@@ -29,6 +29,9 @@ const Login = () => {
     backgroundColor: "#12824C",
   };
 
+  const checkBoxStyle = {
+    color: "#12824C",
+  };
   const preventDefault = (event) => event.preventDefault();
 
   return (
@@ -41,47 +44,49 @@ const Login = () => {
             </Avatar>
             <h2>Sign In</h2>
           </Grid>
-          <TextField
-            id="standard-basic"
-            variant="standard"
-            label="username/email"
-            placeholder="Enter username"
-            fullWidth
-            required
-          />
-          <TextField
-            id="standard-basic"
-            variant="standard"
-            label="Password"
-            placeholder="Enter Password"
-            fullWidth
-            required
-            type="password"
-          />
-          <FormControlLabel
-            control={<Checkbox name="checkedA" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            color="primary"
-            fullWidth
-            variant="contained"
-            style={btstyle}
-          >
-            Sign In
-          </Button>
-          <Typography>
-            <Link href="#" onClick={preventDefault}>
-              Forgot Password ?
-            </Link>
-          </Typography>
-          <Typography>
-            Do you have an account ?
-            <Link href="#" onClick={preventDefault}>
-              Sign Up
-            </Link>
-          </Typography>
+          <form action="">
+            <TextField
+              id="standard-basic"
+              variant="standard"
+              label="username/email"
+              placeholder="Enter username"
+              fullWidth
+              required
+            />
+            <TextField
+              id="standard-basic"
+              variant="standard"
+              label="Password"
+              placeholder="Enter Password"
+              fullWidth
+              required
+              type="password"
+            />
+            <FormControlLabel
+              control={<Checkbox name="checkedA" style={checkBoxStyle} />}
+              label="Remember me"
+            />
+            <Button
+              type="submit"
+              color="primary"
+              fullWidth
+              variant="contained"
+              style={btstyle}
+            >
+              Sign In
+            </Button>
+            <Typography>
+              <Link href="#" onClick={preventDefault}>
+                Forgot Password ?
+              </Link>
+            </Typography>
+            <Typography>
+              Do you have an account ?
+              <Link href="#" onClick={preventDefault}>
+                Sign Up
+              </Link>
+            </Typography>
+          </form>
         </Paper>
       </Grid>
     </>
