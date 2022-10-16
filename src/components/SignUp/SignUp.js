@@ -33,7 +33,8 @@ const SignUp = () => {
     backgroundColor: "#5B6BAA",
   };
   const radioStyle = {
-    color: "#5B6BAA",
+    // color: "#5B6BAA",
+    color: "#AC2132",
   };
   const formControlStyle = {
     marginTop: 5,
