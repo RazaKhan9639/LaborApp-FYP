@@ -1,0 +1,7 @@
+.tabStyle{
+    color: #3A396B;
+    font-weight: bold;
+}
+.tabStyle:hover{
+    color: red;
+}

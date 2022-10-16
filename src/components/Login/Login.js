@@ -12,10 +12,10 @@ import {
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
-const Login = () => {
+const Login = ({handleChange}) => {
   const paperStyle = {
     padding: 20,
-    height: "70vh",
+    height: "85vh",
     width: 300,
     margin: "0 auto",
     backgroundColor: "#CBD6E5",
@@ -31,12 +31,13 @@ const Login = () => {
   };
 
   const checkBoxStyle = {
-    color: "#5B6BAA",
+    // color: "#5B6BAA",
+    color: "#AC2132",
   };
 
   const headingStyle = {
     color: "#3A396B",
-    fontWeight: "bold"
+    fontWeight: "bold",
   };
   const preventDefault = (event) => event.preventDefault();
 
@@ -88,7 +89,7 @@ const Login = () => {
             </Typography>
             <Typography>
               Do you have an account ?
-              <Link href="#" onClick={preventDefault}>
+              <Link href="#" onClick={()=>handleChange("event",1)}>
                 Sign Up
               </Link>
             </Typography>
