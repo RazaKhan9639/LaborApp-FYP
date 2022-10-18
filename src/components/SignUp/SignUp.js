@@ -18,7 +18,7 @@ import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOu
 const SignUp = () => {
   const paperStyle = {
     padding: 20,
-    height: "91vh",
+    height: "92vh",
     width: 300,
     margin: "0 auto",
     backgroundColor: "#CBD6E5",
@@ -41,11 +41,12 @@ const SignUp = () => {
   };
   const checkBoxStyle = {
     paddingTop: 10,
+    fontSize: 14,
   };
 
   const headingStyle = {
     color: "#3A396B",
-    fontWeight: "bold"
+    fontWeight: "bold",
   };
 
   return (
@@ -61,7 +62,7 @@ const SignUp = () => {
               Please fill this form to create an account!!
             </Typography>
           </Grid>
-          <form action="">
+          <form action="submit">
             <TextField
               id="standard-basic"
               variant="standard"
@@ -84,7 +85,7 @@ const SignUp = () => {
               <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
               <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue="female"
+                defaultValue="male"
                 name="radio-buttons-group"
                 style={{ display: "initial" }}
               >
@@ -130,7 +131,7 @@ const SignUp = () => {
             />
             <FormControlLabel
               control={<Checkbox name="checkedA" style={radioStyle} />}
-              label="I accept the terms and conditions."
+              label="Accept Term and Conditions."
               style={checkBoxStyle}
             />
             <Button
