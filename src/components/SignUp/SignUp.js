@@ -14,14 +14,18 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { FormHelperText } from "@mui/material";
 
 const SignUp = () => {
   const paperStyle = {
     padding: 20,
-    height: "91vh",
+    height: "95vh",
     width: 300,
     margin: "0 auto",
     backgroundColor: "#CBD6E5",
+    position: "relative",
   };
   const avatarStyle = {
     backgroundColor: "#5B6BAA",
@@ -41,12 +45,53 @@ const SignUp = () => {
   };
   const checkBoxStyle = {
     paddingTop: 10,
+    fontSize: 14,
   };
 
   const headingStyle = {
     color: "#3A396B",
-    fontWeight: "bold"
+    fontWeight: "bold",
   };
+
+  const initialValues = {
+    name: "",
+    email: "",
+    gender: "",
+    phoneNumber: "",
+    password: "",
+    confirmPassword: "",
+    termsAndConditions: false,
+  };
+
+  const onSubmit = (values, props) => {
+    console.log(values);
+    console.log(props);
+    setTimeout(() => {
+      props.resetForm();
+      props.setSubmitting(false);
+    }, 3000);
+  };
+
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().min(3, "It's too Short").required("Required"),
+    email: Yup.string().email("Invalid email format").required("Required"),
+    phoneNumber: Yup.number()
+      .typeError("Enter Valid Phone Number")
+      .required("Required"),
+    gender: Yup.string()
+      .oneOf(["male", "female"], "Required")
+      .required("Required"),
+    password: Yup.string()
+      .min(8, "Password minimum Length should be 8")
+      .required("Required"),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref("password")], "Password Not Matched")
+      .required("Required"),
+    termsAndConditions: Yup.string().oneOf(
+      ["true"],
+      "Accept Terms & Conditions"
+    ),
+  });
 
   return (
     <>
@@ -61,87 +106,127 @@ const SignUp = () => {
               Please fill this form to create an account!!
             </Typography>
           </Grid>
-          <form action="">
-            <TextField
-              id="standard-basic"
-              variant="standard"
-              label="Full Name"
-              placeholder="Enter Your Full Name"
-              fullWidth
-              required
-              type="text"
-            />
-            <TextField
-              id="standard-basic"
-              variant="standard"
-              label="Email"
-              placeholder="Enter Your Email"
-              fullWidth
-              required
-              type="email"
-            />
-            <FormControl style={formControlStyle}>
-              <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
-              <RadioGroup
-                aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue="female"
-                name="radio-buttons-group"
-                style={{ display: "initial" }}
-              >
-                <FormControlLabel
-                  value="female"
-                  control={<Radio style={radioStyle} />}
-                  label="Female"
+          <Formik
+            initialValues={initialValues}
+            onSubmit={onSubmit}
+            validationSchema={validationSchema}
+          >
+            {(props) => (
+              <Form>
+                <Field
+                  as={TextField}
+                  id="standard-basic"
+                  variant="standard"
+                  label="Full Name"
+                  placeholder="Enter Your Full Name"
+                  fullWidth
+                  required
+                  name="name"
+                  helperText={<ErrorMessage name="name" />}
+                  type="text"
                 />
-                <FormControlLabel
-                  value="male"
-                  control={<Radio style={radioStyle} />}
-                  label="Male"
+                <Field
+                  as={TextField}
+                  id="standard-basic"
+                  variant="standard"
+                  label="Email"
+                  name="email"
+                  placeholder="Enter Your Email"
+                  helperText={<ErrorMessage name="email" />}
+                  fullWidth
+                  required
+                  type="email"
                 />
-              </RadioGroup>
-            </FormControl>
 
-            <TextField
-              id="standard-basic"
-              variant="standard"
-              label="Phone Number"
-              placeholder="Enter Your Phone Number"
-              fullWidth
-              required
-              type="text"
-            />
-            <TextField
-              id="standard-basic"
-              variant="standard"
-              label="Password"
-              placeholder="Enter Your Password"
-              fullWidth
-              required
-              type="password"
-            />
-            <TextField
-              id="standard-basic"
-              variant="standard"
-              label="Confirm Password"
-              placeholder="Confirm Your Password"
-              fullWidth
-              required
-              type="password"
-            />
-            <FormControlLabel
-              control={<Checkbox name="checkedA" style={radioStyle} />}
-              label="I accept the terms and conditions."
-              style={checkBoxStyle}
-            />
-            <Button
-              type="submit"
-              color="primary"
-              variant="contained"
-              style={btstyle}
-            >
-              Sign Up
-            </Button>
-          </form>
+                <Field
+                  as={TextField}
+                  id="standard-basic"
+                  variant="standard"
+                  label="Phone Number"
+                  placeholder="Enter Your Phone Number"
+                  fullWidth
+                  required
+                  name="phoneNumber"
+                  helperText={<ErrorMessage name="phoneNumber" />}
+                  type="text"
+                />
+                <FormControl style={formControlStyle}>
+                  <FormLabel id="demo-radio-buttons-group-label">
+                    Gender
+                  </FormLabel>
+                  <Field
+                    as={RadioGroup}
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="male"
+                    // name="radio-buttons-group"
+                    name="gender"
+                    style={{ display: "initial" }}
+                  >
+                    <FormControlLabel
+                      value="female"
+                      control={<Radio style={radioStyle} />}
+                      label="Female"
+                    />
+                    <FormControlLabel
+                      value="male"
+                      control={<Radio style={radioStyle} />}
+                      label="Male"
+                    />
+                  </Field>
+                </FormControl>
+                <FormHelperText>
+                  <ErrorMessage name="gender" />
+                </FormHelperText>
+                <Field
+                  as={TextField}
+                  id="standard-basic"
+                  variant="standard"
+                  label="Password"
+                  placeholder="Enter Your Password"
+                  name="password"
+                  helperText={<ErrorMessage name="password" />}
+                  fullWidth
+                  required
+                  type="password"
+                />
+                <Field
+                  as={TextField}
+                  id="standard-basic"
+                  variant="standard"
+                  label="Confirm Password"
+                  name="confirmPassword"
+                  helperText={<ErrorMessage name="confirmPassword" />}
+                  placeholder="Confirm Your Password"
+                  fullWidth
+                  required
+                  type="password"
+                />
+                <FormControlLabel
+                  control={
+                    <Field
+                      as={Checkbox}
+                      name="termsAndConditions"
+                      style={radioStyle}
+                    />
+                  }
+                  label="Accept Term and Conditions."
+                  style={checkBoxStyle}
+                />
+                <FormHelperText>
+                  <ErrorMessage name="termsAndConditions" />
+                </FormHelperText>
+                <Button
+                  type="submit"
+                  color="primary"
+                  variant="contained"
+                  style={btstyle}
+                  disabled={props.isSubmitting}
+                >
+                  {props.isSubmitting ? "Loading" : "Sign Up"}
+                </Button>
+              </Form>
+            )}
+          </Formik>
         </Paper>
       </Grid>
     </>
