@@ -69,7 +69,7 @@ const SignInOutContainer = () => {
           <Tab label="Sign Up" style={tabStyle} />
         </Tabs>
         <TabPanel value={value} index={0}>
-          <Login handleChange={handleChange}/>
+          <Login handleChange={handleChange} />
         </TabPanel>
         <TabPanel value={value} index={1}>
           <SignUp />
