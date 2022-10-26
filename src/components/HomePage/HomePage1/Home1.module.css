@@ -1,0 +1,61 @@
+.maincontainer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.Heading {
+  background-image: url("./home2.png");
+  height: 103vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: -82px;
+  padding-left: 7rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 12px;
+  align-items: flex-start;
+}
+.subheading {
+  padding-top: 15rem;
+  color: #5b6baa;
+  font-size: 3rem;
+  font-weight: 1000;
+  font-family: "Poppins", sans-serif;
+}
+
+.image {
+  height: 89vh;
+  width: 85vh;
+  margin-top: 5rem;
+}
+.paragraph {
+  color: #ac2132;
+  font-size: 1.6rem;
+  line-height: 27px;
+  font-weight: 2px;
+  padding-left: 4.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.btn {
+  background-color: #5b6baa;
+  color: #ffff;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 1000;
+  font-family: "Poppins", sans-serif;
+  margin-top: 0.5rem;
+  border: none;
+  margin-left: 7.5rem;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+.btn:hover{
+  background-color: #3A396B;
+  color: #ac2132;
+}
