@@ -1,13 +1,14 @@
-*{
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif, ;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-
 
 .App {
   /* text-align: center; */
 }
 
-.MuiFormHelperText-root{
-  color: #AC2132 !important;
+.MuiFormHelperText-root {
+  color: #ac2132 !important;
 }
