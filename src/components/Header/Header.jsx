@@ -17,6 +17,9 @@ function Header() {
         </a>
         <nav>
           <ul className="nav__links">
+          <li>
+              <a href="/#">Home</a>
+            </li>
             <li>
               {/* <a href="#">Services</a> */}
               <span class="dropdown">
@@ -29,10 +32,10 @@ function Header() {
               </span>
             </li>
             <li>
-              <a href="/#">Projects</a>
+              <a href="/#">About</a>
             </li>
             <li>
-              <a href="/#">About</a>
+              <a href="/#">Blog</a>
             </li>
           </ul>
         </nav>
