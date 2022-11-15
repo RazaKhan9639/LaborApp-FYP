@@ -6,8 +6,10 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Login from "../components/Login/Login";
 import SignUp from "../components/SignUp/SignUp";
-import img from "./LoginPage.jpeg";
+import img from "./LoginPage.jpg";
 import Style from "./Index.module.css";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const SignInOutContainer = () => {
   const [value, setValue] = React.useState(0);
@@ -47,6 +49,7 @@ const SignInOutContainer = () => {
 
   return (
     <>
+      <Header />
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -90,6 +93,7 @@ const SignInOutContainer = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
