@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import logo_image from "./Labour_App_Logo.png";
 
 function Header() {
   // const doc = document;
@@ -13,12 +14,12 @@ function Header() {
     <>
       <header>
         <a className="logo" href="/#">
-          <img src="images/logo.svg" alt="logo"></img>
+          <img src={logo_image} className="Logo" alt="logo"></img>
         </a>
         <nav>
           <ul className="nav__links">
           <li>
-              <a href="/#">Home</a>
+              <a href="/home">Home</a>
             </li>
             <li>
               {/* <a href="#">Services</a> */}
