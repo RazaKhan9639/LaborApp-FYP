@@ -1,5 +1,16 @@
 import React from "react";
-import img from "./assets/AC_Services.png";
+import img from "./assets/AC.png";
+import car from "./assets/Car.png";
+import plumber from "./assets/Plumber.png";
+import electrician from "./assets/electrician.png";
+import handyman from "./assets/handyman.png";
+import painter from "./assets/painter.png";
+import carpenter from "./assets/carpenter.png";
+import homeappliance from "./assets/homeApp.png";
+import geyser from "./assets/geyser.png";
+import pest from "./assets/pest.png";
+import cardetail from "./assets/carDetailing.png";
+import cleaning from "./assets/cleaning.png";
 import "./services.css";
 
 const Service = () => {
@@ -30,7 +41,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={plumber}
                       alt="Ac_Services"
                       height={69}
                       width={69}
@@ -42,7 +53,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={car}
                       alt="Ac_Services"
                       height={69}
                       width={69}
@@ -54,7 +65,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={electrician}
                       alt="Ac_Services"
                       height={69}
                       width={69}
@@ -66,7 +77,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={handyman}
                       alt="Ac_Services"
                       height={69}
                       width={69}
@@ -78,7 +89,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={painter}
                       alt="Ac_Services"
                       height={69}
                       width={69}
@@ -90,7 +101,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={carpenter}
                       alt="Ac_Services"
                       height={69}
                       width={69}
@@ -102,7 +113,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={homeappliance}
                       alt="Ac_Services"
                       height={69}
                       width={69}
@@ -114,7 +125,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={geyser}
                       alt="Ac_Services"
                       height={69}
                       width={69}
@@ -126,7 +137,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={pest}
                       alt="Ac_Services"
                       height={69}
                       width={69}
@@ -138,7 +149,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={cardetail}
                       alt="Ac_Services"
                       height={69}
                       width={69}
@@ -150,7 +161,7 @@ const Service = () => {
                   <a href="#">
                     <img
                       loading="lazy"
-                      src={img}
+                      src={cleaning}
                       alt="Ac_Services"
                       height={69}
                       width={69}
