@@ -24,7 +24,7 @@
 }
 .subheading {
   padding-top: 13rem;
-  color: #5b6baa;
+  color: #3a396b;
   font-size: 3.5rem;
   font-weight: bolder;
   /* padding-top: 15rem;
@@ -54,7 +54,7 @@
   font-family: "Poppins", sans-serif; */
 }
 .btn {
-  background-color: #5b6baa;
+  background-color: #3a396b;
   color: #ffff;
   width: 8.5rem;
   height: 2.8rem;
@@ -80,6 +80,7 @@
   transition: 0.3s; */
 }
 .btn:hover {
-  background-color: #3a396b;
+  background-color: #5b6baa;
   color: #ac2132;
+  font-weight: 1000;
 }

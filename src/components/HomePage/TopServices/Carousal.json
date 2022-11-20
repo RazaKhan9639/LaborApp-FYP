@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "Title": "Geyser ",
+    "star": "4.5",
+    "price": "1000",
+    "img": "./Images/1.jpg"
+  },
+  {
+    "id": 2,
+    "Title": "Geyser ",
+    "star": "4.5",
+    "price": "1000",
+    "img": "./Images/Electrician.jpg"
+  },
+  {
+    "id": 3,
+    "Title": " Repairing",
+    "star": "4.5",
+    "price": "1000",
+    "img": "./Images/plumber.jpg"
+  },
+  {
+    "id": 4,
+    "Title": "Electrician",
+    "star": "4.5",
+    "price": "1000",
+    "img": "./Images/carRepairing.webp"
+  }
+]
