@@ -1,0 +1,127 @@
+.greyed-box {
+  z-index: 1;
+  background: #cbd6e5;
+  padding: 25px 16px;
+  border-radius: 10px;
+}
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.cl-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.ts-content {
+  padding-top: 1rem;
+}
+.before-st {
+  color: #3a396b;
+  margin-bottom: 1rem;
+  font-size: 28px;
+  font-weight: 500;
+}
+.trending-services .section-title {
+  color: #272d4e;
+}
+.section-title {
+  font-weight: 900;
+}
+h2 {
+  line-height: 1.2;
+}
+.text-grey {
+  color: #8e8e93;
+}
+/* Car Section CSS */
+.cl-7 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.card {
+  border-radius: 30px;
+  border: 1px solid red;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px 0 rgba(103, 92, 92, 0.05);
+}
+.card-top {
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 45px;
+}
+.ts-card {
+  padding: 0.5rem;
+  padding-top: 38px;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ac2132;
+  margin-bottom: 0.5rem;
+}
+.card-bottom {
+  padding: 1rem;
+  padding-top: 0;
+  background-color: #b0b8c4;
+  border-radius: 0 0 20px 20px;
+}
+.star-image {
+  display: flex;
+  background-color: #cbd6e5;
+  width: 4rem;
+  border-radius: 13px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ac2132;
+  margin-bottom: 0.5rem;
+}
+.star {
+  color: #ac2132;
+  font-size: 1rem;
+}
+/* .star-image img {
+  width: 1.5rem;
+  height: 1.5rem;
+} */
+@media (min-width: 768px) {
+  .greyed-box {
+    padding: 44px 32px;
+  }
+  .cl-5 {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+  .ts-content {
+    padding-top: 4rem;
+    margin-left: 26%;
+    margin-right: 10%;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .section-exp {
+    margin: 0;
+  }
+  .cl-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+  }
+}

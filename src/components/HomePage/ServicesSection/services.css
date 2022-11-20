@@ -15,9 +15,11 @@
 .section_title {
   font-weight: 900;
   color: #3a396b;
+  padding-top: 20px;
 }
 .section_exp {
   color: grey;
+  padding-bottom: 20px;
 }
 .line {
   display: flex;
@@ -56,12 +58,12 @@
   text-decoration: none;
   flex-direction: column;
   font-size: 20px;
-  color: #000;
+  color: #3a396b;
   height: 160px;
   border-radius: 15px;
 }
 .sc-item a:hover {
-  background-color: #5b6baa;
+  background-color: #3a396b;
 }
 .sc-item a img {
   width: auto;
@@ -71,7 +73,9 @@
   margin: 0.2rem 0 0;
   color: #ac2132;
 }
-
+.sc-item a:hover p {
+  color: #cbd6e5;
+}
 @media (min-width: 768px) {
   .service {
     margin-top: 50px;

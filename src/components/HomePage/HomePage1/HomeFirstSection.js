@@ -1,6 +1,6 @@
 import React from "react";
 import Style from "./Home1.module.css";
-import img from "./home1.png";
+import img from "./home2.jpg";
 
 const HomeFirstSection = () => {
   return (
@@ -8,7 +8,7 @@ const HomeFirstSection = () => {
       <div className={Style.maincontainer}>
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 order-2 order-lg-1">
               <div className={Style.Heading}>
                 <h1 className={Style.subheading}>
                   We are Providing
@@ -22,7 +22,7 @@ const HomeFirstSection = () => {
                 <button className={Style.btn}>Get Started</button>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 order-1 order-lg-2">
               <div className={Style.imagediv}>
                 <img src={img} className={Style.image} alt="Home1Image" />
               </div>
