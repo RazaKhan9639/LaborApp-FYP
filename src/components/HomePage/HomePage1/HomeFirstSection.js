@@ -1,6 +1,6 @@
 import React from "react";
 import Style from "./Home1.module.css";
-import img from "./home2.jpg";
+import img from "./home2.png";
 
 const HomeFirstSection = () => {
   return (

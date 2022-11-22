@@ -66,7 +66,7 @@ const TopServices = () => {
                   data.map((item) => {
                     return (
                       <div className="ts-card">
-                        <div className="card" key={item.id}>
+                        <div className="cardDiv" key={item.id}>
                           <div className="card-top">
                             <img
                               className="card-img"

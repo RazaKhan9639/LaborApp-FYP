@@ -64,6 +64,7 @@
 }
 .sc-item a:hover {
   background-color: #3a396b;
+  transform: scale(1.1);
 }
 .sc-item a img {
   width: auto;

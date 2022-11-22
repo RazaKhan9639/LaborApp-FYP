@@ -44,9 +44,8 @@ h2 {
   padding-right: 15px;
   padding-left: 15px;
 }
-.card {
-  border-radius: 30px;
-  border: 1px solid red;
+.cardDiv {
+  border-radius: 20px;
   margin-bottom: 30px;
   box-shadow: 0 0 10px 0 rgba(103, 92, 92, 0.05);
 }
