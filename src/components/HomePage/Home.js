@@ -5,7 +5,7 @@ import HomeFirstSection from "./HomePage1/HomeFirstSection";
 import Service from "./ServicesSection/Service";
 import Feature from "./HomeFeatureSection/Feature";
 import TopServices from "./TopServices/TopServices";
-import Carousal from "./TopServices/Carousal";
+import CustomerReview from "./CustomerReview/CustomerReview";
 const Home = () => {
   return (
     <div>
@@ -14,7 +14,8 @@ const Home = () => {
       <Service />
       <Feature />
       <TopServices />
-      {/* <Carousal /> */}
+      <CustomerReview />
+
       <Footer />
     </div>
   );

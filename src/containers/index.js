@@ -6,7 +6,7 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Login from "../components/Login/Login";
 import SignUp from "../components/SignUp/SignUp";
-import img from "./LoginPage.jpg";
+import img from "./Login.jpg";
 import Style from "./Index.module.css";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
