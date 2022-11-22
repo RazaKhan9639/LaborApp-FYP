@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "ServiceName": "Sofa Cleaning Services"
+  },
+  {
+    "id": 2,
+    "ServiceName": "UPS Installation Services"
+  },
+  {
+    "id": 3,
+    "ServiceName": "Furniture Repairing Services"
+  },
+  {
+    "id": 4,
+    "ServiceName": "Water Tank Cleaning Services"
+  },
+  {
+    "id": 5,
+    "ServiceName": "Car Wash Services"
+  },
+  {
+    "id": 6,
+    "ServiceName": "Refrigerator Repairing Services"
+  },
+  {
+    "id": 8,
+    "ServiceName": "Door Lock Replacement Services"
+  },
+  {
+    "id": 9,
+    "ServiceName": "AC Repairing Services"
+  },
+  {
+    "id": 10,
+    "ServiceName": "Mattres Cleaning Services"
+  },
+  {
+    "id": 11,
+    "ServiceName": "Painting Services"
+  },
+  {
+    "id": 12,
+    "ServiceName": "Carpenter Services"
+  },
+  {
+    "id": 13,
+    "ServiceName": "Home Construction Services"
+  },
+  {
+    "id": 14,
+    "ServiceName": "Home Cleaning Services"
+  },
+  {
+    "id": 15,
+    "ServiceName": "Car Computer Testing Services"
+  },
+  {
+    "id": 16,
+    "ServiceName": "Car Repairing Services"
+  }
+]
