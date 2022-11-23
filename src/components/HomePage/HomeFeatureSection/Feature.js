@@ -1,5 +1,6 @@
 import React from "react";
-import img from "./images/plumber.jpg";
+// import img from "./images/plumber.png";
+import img from "./images/24-7.png";
 import check from "./SVGs/check.svg";
 import clock from "./SVGs/clock.svg";
 import box from "./SVGs/box.svg";

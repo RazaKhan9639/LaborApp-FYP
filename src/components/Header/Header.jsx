@@ -24,22 +24,29 @@ function Header() {
               <span class="dropdown">
                 <a href="/#" class="dropbtn">Services</a>
                 <span class="dropdown-content">
-                  <a href="/#">Link 1</a>
-                  <a href="/#">Link 2</a>
-                  <a href="/#">Link 3</a>
+                  <a href="/home">Link 1</a>
+                  <a href="/home">Link 2</a>
+                  <a href="/home">Link 3</a>
                 </span>
               </span>
             </li>
             <li>
-              <a href="/#">About</a>
+              <a href="/home">About</a>
             </li>
             <li>
-              <a href="/#">Blog</a>
+              <a href="/home">Blog</a>
+            </li>
+            <li>
+              <a href="/contact">Contact Us</a>
             </li>
           </ul>
         </nav>
+
         <a className="cta" href="/login">
           Login
+
+        <a className="cta" href="/#">
+          Login/SignUp
         </a>
         <p className="menu cta">Menu</p>
       </header>

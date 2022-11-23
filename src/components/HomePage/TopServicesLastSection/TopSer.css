@@ -1,0 +1,46 @@
+.greyed-box {
+  z-index: 1;
+  background: #f6f6f6;
+  padding: 25px 16px;
+  border-radius: 20px;
+}
+.section-title {
+  font-weight: 900;
+}
+.topservices-ul {
+  margin-bottom: 1rem;
+}
+.no-disc {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.topservices-ul .tsu-item {
+  transition: transform 0.5s;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  display: inline-block;
+}
+.topservices-ul .tsu-item:hover {
+  transform: scale(1.1);
+}
+.topservices-ul .tsu-item a {
+  border: 1px solid #ac2132;
+  padding: 8px 10px;
+  border-radius: 20px;
+  color: #5b6baa;
+  display: block;
+  text-decoration: none;
+}
+.top-services-inner {
+  position: relative;
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .greyed-box {
+    padding: 44px 32px;
+  }
+  .h2 {
+    font-size: 2rem;
+  }
+}

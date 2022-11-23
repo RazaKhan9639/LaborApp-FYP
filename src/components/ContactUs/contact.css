@@ -1,0 +1,114 @@
+.contact-us {
+  padding: 0;
+  margin: 0;
+}
+.upperSection {
+  /* background-color: lightcyan; */
+  padding: 0;
+  margin: 0;
+}
+.ImageSection img {
+  width: 60%;
+  height: 50%;
+  object-fit: cover;
+  align-items: center;
+  margin-left: 14rem;
+  margin-top: -3rem;
+}
+.Text {
+  text-align: center;
+  margin-top: -5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 0;
+}
+.Title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3a396b;
+  margin-bottom: 1rem;
+}
+.Paragraph-Text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #515354;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+.LowerSection {
+  padding: 0;
+  margin: 0;
+}
+.ContactForm {
+  background-color: #cbd6e5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  padding: 50px;
+}
+.contact-form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ac2132;
+  margin-bottom: 1rem;
+}
+.Button {
+  background-color: #5b6baa;
+  color: #ac2132;
+  border: none;
+  border-radius: 5rem;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.form-group label {
+  color: #ac2132;
+  font-weight: 600;
+}
+.Button:hover {
+  background-color: #ac2132;
+  color: #5b6baa;
+}
+.CardsSection {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  padding: 50px;
+  /* background-color: #cbd6e5; */
+  position: relative;
+}
+.Card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.CardText {
+  border: 2px solid #5b6baa;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: #eef1f6;
+}
+.CardText a {
+  color: #ac2132;
+  font-weight: 600;
+  text-decoration: none;
+}
+.CardText a:hover {
+  color: #5b6baa;
+}
+.EPhone-image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  align-items: center;
+  margin-top: -3rem;
+}
