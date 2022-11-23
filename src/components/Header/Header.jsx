@@ -8,8 +8,6 @@ function Header() {
   // const menuClose = doc.querySelector(".close");
   // const overlay = doc.querySelector(".overlay");
 
-
-
   return (
     <>
       <header>
@@ -43,6 +41,10 @@ function Header() {
             </li>
           </ul>
         </nav>
+
+        <a className="cta" href="/login">
+          Login
+
         <a className="cta" href="/#">
           Login/SignUp
         </a>

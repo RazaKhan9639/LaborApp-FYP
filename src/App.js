@@ -3,10 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
 import SignInOutContainer from "./containers";
+
+// import HomeFirstSection from "./components/HomePage/HomePage1/HomeFirstSection";
+import FAQS from './components/FAQS/FAQS';
+
 import Contact from "./components/ContactUs/Contact";
+
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/HomePage/Home";
+import About from "./components/AboutUS/About";
+import FAQSData from "./components/FAQS/FAQSData";
 
 function App() {
   return (
@@ -21,7 +28,12 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/header" element={<Header />} />
             <Route path="/footer" element={<Footer />} />
+
+            <Route path="/faqs" element={<FAQS data={FAQSData}/>} />
+            <Route path="/about" element={<About />} />
+
             <Route path="/contact" element={<Contact />} />
+
           </Routes>
         </Router>
       </div>
