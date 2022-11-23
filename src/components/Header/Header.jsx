@@ -8,8 +8,6 @@ function Header() {
   // const menuClose = doc.querySelector(".close");
   // const overlay = doc.querySelector(".overlay");
 
-
-
   return (
     <>
       <header>
@@ -40,8 +38,8 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <a className="cta" href="/#">
-          Contact
+        <a className="cta" href="/login">
+          Login
         </a>
         <p className="menu cta">Menu</p>
       </header>
