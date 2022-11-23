@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
 import SignInOutContainer from "./containers";
-// import HomeFirstSection from "./components/HomePage/HomePage1/HomeFirstSection";
-
+import Contact from "./components/ContactUs/Contact";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/HomePage/Home";
@@ -22,6 +21,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/header" element={<Header />} />
             <Route path="/footer" element={<Footer />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Router>
       </div>
