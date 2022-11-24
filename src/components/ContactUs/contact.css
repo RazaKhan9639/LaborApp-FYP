@@ -3,7 +3,6 @@
   margin: 0;
 }
 .upperSection {
-  /* background-color: lightcyan; */
   padding: 0;
   margin: 0;
 }
@@ -67,6 +66,7 @@
   padding: 10px;
   padding-left: 30px;
   padding-right: 30px;
+  width: 100%;
 }
 .form-group label {
   color: #ac2132;
