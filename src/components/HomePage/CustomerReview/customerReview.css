@@ -6,9 +6,10 @@
 .customer-speaks .text-center {
   margin-bottom: 2rem;
 }
-.section-title {
+.section-Title {
   font-weight: 900;
   color: #3a396b;
+  text-align: center;
 }
 
 /* Card Part Css.. */

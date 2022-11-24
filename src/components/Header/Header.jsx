@@ -31,20 +31,19 @@ function Header() {
               </span>
             </li>
             <li>
-              <a href="/home">About</a>
+              <a href="/about">About</a>
             </li>
             <li>
               <a href="/home">Blog</a>
+            </li>
+            <li>
+              <a href="/faqs">FAQs</a>
             </li>
             <li>
               <a href="/contact">Contact Us</a>
             </li>
           </ul>
         </nav>
-
-        <a className="cta" href="/login">
-          Login
-
         <a className="cta" href="/#">
           Login/SignUp
         </a>

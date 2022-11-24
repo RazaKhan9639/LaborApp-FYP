@@ -45,7 +45,7 @@ const CustomerReview = () => {
       <section className="customer-speaks">
         <div className="section-inner">
           <div className="text-center">
-            <h2 className="section-title">What Our Customers Say!</h2>
+            <h2 className="section-Title">What Our Customers Say!</h2>
           </div>
         </div>
         <Slider {...settings}>
