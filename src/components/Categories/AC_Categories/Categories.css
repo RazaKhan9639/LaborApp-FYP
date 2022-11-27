@@ -1,0 +1,33 @@
+.CategoriesSection {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.CategoriesSection__container__image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 0;
+}
+
+.Category_Image {
+  width: 50%;
+  height: 30%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -10px;
+}
+.CategoriesSection__container__text {
+  margin-left: 10rem;
+}
+.Heading1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #3a396b;
+  margin-bottom: 1rem;
+}
