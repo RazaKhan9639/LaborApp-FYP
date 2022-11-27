@@ -26,7 +26,7 @@ const Service = () => {
             <div className="cl-12">
               <ul className="services-cards no-disc">
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/ACcategories">
                     <img
                       loading="lazy"
                       src={img}
@@ -38,7 +38,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/plumbing">
                     <img
                       loading="lazy"
                       src={plumber}
@@ -50,7 +50,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/carservices">
                     <img
                       loading="lazy"
                       src={car}
@@ -62,7 +62,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/electrician">
                     <img
                       loading="lazy"
                       src={electrician}
@@ -74,7 +74,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/handyman">
                     <img
                       loading="lazy"
                       src={handyman}
@@ -86,7 +86,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/painting">
                     <img
                       loading="lazy"
                       src={painter}
@@ -98,7 +98,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/carpenter">
                     <img
                       loading="lazy"
                       src={carpenter}
@@ -110,7 +110,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/homeappliance">
                     <img
                       loading="lazy"
                       src={homeappliance}
@@ -122,7 +122,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/geyser">
                     <img
                       loading="lazy"
                       src={geyser}
@@ -134,7 +134,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/pestcontrol">
                     <img
                       loading="lazy"
                       src={pest}
@@ -146,7 +146,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/cardetailing">
                     <img
                       loading="lazy"
                       src={cardetail}
@@ -158,7 +158,7 @@ const Service = () => {
                   </a>
                 </li>
                 <li className="sc-item">
-                  <a href="/home">
+                  <a href="/homecleaning">
                     <img
                       loading="lazy"
                       src={cleaning}

@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
 import SignInOutContainer from "./containers";
-
-// import HomeFirstSection from "./components/HomePage/HomePage1/HomeFirstSection";
-import FAQS from './components/FAQS/FAQS';
+import FAQS from "./components/FAQS/FAQS";
 
 import Contact from "./components/ContactUs/Contact";
 
@@ -14,6 +12,18 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/HomePage/Home";
 import About from "./components/AboutUS/About";
 import FAQSData from "./components/FAQS/FAQSData";
+import Categories from "./components/Categories/Categories";
+import CarServices from "./components/Categories/CarServices";
+import PlumbingServices from "./components/Categories/PlumbingServices";
+import PestControlServices from "./components/Categories/PestControlServices";
+import HomeAppliance from "./components/Categories/HomeApplianceServices";
+import Handyman from "./components/Categories/Handyman";
+import HomeCleaning from "./components/Categories/Cleaning";
+import Geyser from "./components/Categories/GeyserServices";
+import Electrician from "./components/Categories/ElectricianServices";
+import Carpenter from "./components/Categories/CarpenterServices";
+import CarDetailing from "./components/Categories/CarDetailing";
+import PainterServices from "./components/Categories/PainterServices";
 
 function App() {
   return (
@@ -29,11 +39,22 @@ function App() {
             <Route path="/header" element={<Header />} />
             <Route path="/footer" element={<Footer />} />
 
-            <Route path="/faqs" element={<FAQS data={FAQSData}/>} />
+            <Route path="/faqs" element={<FAQS data={FAQSData} />} />
             <Route path="/about" element={<About />} />
 
             <Route path="/contact" element={<Contact />} />
-
+            <Route path="/ACcategories" element={<Categories />} />
+            <Route path="/carservices" element={<CarServices />} />
+            <Route path="/plumbing" element={<PlumbingServices />} />
+            <Route path="/pestcontrol" element={<PestControlServices />} />
+            <Route path="/homeappliance" element={<HomeAppliance />} />
+            <Route path="/handyman" element={<Handyman />} />
+            <Route path="/homecleaning" element={<HomeCleaning />} />
+            <Route path="/geyser" element={<Geyser />} />
+            <Route path="/electrician" element={<Electrician />} />
+            <Route path="/carpenter" element={<Carpenter />} />
+            <Route path="/cardetailing" element={<CarDetailing />} />
+            <Route path="/painting" element={<PainterServices />} />
           </Routes>
         </Router>
       </div>
