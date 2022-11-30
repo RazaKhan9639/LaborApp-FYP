@@ -31,3 +31,45 @@
   color: #3a396b;
   margin-bottom: 1rem;
 }
+.searchbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.searchinput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border: 1px solid #3a396b;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ac2132;
+  padding: 0.5rem;
+  margin-top: -2rem;
+  margin-right: 5rem;
+}
+.SearchIcon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: -2rem;
+  margin-top: -1.5rem;
+  padding-right: 20px;
+}
+.SearchIcon_mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Icon {
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #3a396b;
+}
