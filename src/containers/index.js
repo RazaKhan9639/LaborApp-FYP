@@ -8,8 +8,8 @@ import Login from "../components/Login/Login";
 import SignUp from "../components/SignUp/SignUp";
 import img from "./Login.png";
 import Style from "./Index.module.css";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+// import Header from "../components/Header/Header";
+// import Footer from "../components/Footer/Footer";
 
 const SignInOutContainer = () => {
   const [value, setValue] = React.useState(0);
@@ -49,7 +49,7 @@ const SignInOutContainer = () => {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -93,7 +93,7 @@ const SignInOutContainer = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

@@ -1,16 +1,18 @@
 import React from "react";
 import "./about.css";
 import pic from "./about.jpeg";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 
 const About = () => {
   return (
     <>
-      <Header />
-
       <div>
-        <img src={pic} alt="About us page banner" height="400" width="1000" className="banner-image" />
+        <img
+          src={pic}
+          alt="About us page banner"
+          height="400"
+          width="1000"
+          className="banner-image"
+        />
       </div>
 
       <div className="contained">
@@ -53,8 +55,6 @@ const About = () => {
           </blockquote>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };
