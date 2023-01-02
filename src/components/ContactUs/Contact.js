@@ -3,13 +3,11 @@ import image from "./ContactUs.png";
 import "./contact.css";
 import phone from "./SVGs/phone.svg";
 import email from "./SVGs/email.svg";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+
 const Contact = () => {
   return (
     <>
       <div>
-        <Header />
         <section className="contact-us">
           <div className="upperSection">
             <div className="ImageSection">
@@ -100,7 +98,6 @@ const Contact = () => {
             </div>
           </div>
         </section>
-        <Footer />
       </div>
     </>
   );

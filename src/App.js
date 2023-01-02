@@ -30,14 +30,15 @@ function App() {
     <>
       <div className="App">
         <Router>
+          <Header />
           <Routes>
             <Route path="/" element={<SignInOutContainer />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="*" element={<h1>404 Not Found</h1>} />
             <Route path="/home" element={<Home />} />
-            <Route path="/header" element={<Header />} />
-            <Route path="/footer" element={<Footer />} />
+            {/* <Route path="/header" element={<Header />} />
+            <Route path="/footer" element={<Footer />} /> */}
 
             <Route path="/faqs" element={<FAQS data={FAQSData} />} />
             <Route path="/about" element={<About />} />
@@ -56,6 +57,7 @@ function App() {
             <Route path="/cardetailing" element={<CarDetailing />} />
             <Route path="/painting" element={<PainterServices />} />
           </Routes>
+          <Footer />
         </Router>
       </div>
     </>

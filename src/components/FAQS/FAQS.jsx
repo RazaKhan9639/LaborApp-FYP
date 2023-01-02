@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { MdAdd, MdRemove } from "react-icons/md";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+
 import "./faqs.css";
 import faqs from "./faqs.jpg";
 
@@ -9,10 +8,14 @@ const FAQS = (props) => {
   const [expandFAQ, setExpandFAQ] = useState(null);
   return (
     <>
-      <Header />
-
       <div>
-        <img src={faqs} alt="About us page banner" height="400" width="1000" className="banner-image" />
+        <img
+          src={faqs}
+          alt="About us page banner"
+          height="400"
+          width="1000"
+          className="banner-image"
+        />
       </div>
       <div className="header-faq"></div>
       {props.data.faqs.map((faq, index) => {
@@ -58,15 +61,11 @@ const FAQS = (props) => {
                   </div>
                 </div>
               </div>
-              
             </div>
-
-            
           </>
         );
       })}
       <div className="footer-faq"></div>
-      <Footer />
     </>
   );
 };
