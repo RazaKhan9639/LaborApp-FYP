@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.css";
 import logo_image from "./Labour_App_Logo.png";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   // const doc = document;
@@ -11,58 +12,58 @@ function Header() {
   return (
     <>
       <header>
-        <a className="logo" href="/#">
+        <NavLink className="logo" to="/#">
           <img src={logo_image} className="Logo" alt="logo"></img>
-        </a>
+        </NavLink>
         <nav>
           <ul className="nav__links">
-          <li>
-              <a href="/home">Home</a>
+            <li>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>
               {/* <a href="#">Services</a> */}
               <span class="dropdown">
-                <a href="/#" class="dropbtn">Services</a>
+                <NavLink to="/#" class="dropbtn">
+                  Services
+                </NavLink>
                 <span class="dropdown-content">
-                  <a href="/home">Link 1</a>
-                  <a href="/home">Link 2</a>
-                  <a href="/home">Link 3</a>
+                  <NavLink to="/home">Link 1</NavLink>
+                  <NavLink to="/home">Link 2</NavLink>
+                  <NavLink to="/home">Link 3</NavLink>
                 </span>
               </span>
             </li>
             <li>
-              <a href="/about">About</a>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <a href="/home">Blog</a>
+              <NavLink to="/home">Blog</NavLink>
             </li>
             <li>
-              <a href="/faqs">FAQs</a>
+              <NavLink to="/faqs">FAQs</NavLink>
             </li>
             <li>
-              <a href="/contact">Contact Us</a>
+              <NavLink to="/contact">Contact Us</NavLink>
             </li>
           </ul>
         </nav>
-        <a className="cta" href="/#">
+        <NavLink className="cta" to="/#">
           Login/SignUp
-        </a>
-        <p className="menu cta">Menu</p>
+        </NavLink>
+        <NavLink className="menu cta">Menu</NavLink>
       </header>
       <div id="mobile__menu" class="overlay">
-        <a href="/#" class="close">&times;</a>
+        <NavLink to="/#" class="close">
+          &times;
+        </NavLink>
         <div class="overlay__content">
-          <a href="/#">Services</a>
-          <a href="/#">Hiring</a>
-          <a href="/#">About</a>
+          <NavLink to="/#">Services</NavLink>
+          <NavLink to="/#">Hiring</NavLink>
+          <NavLink to="/#">About</NavLink>
         </div>
       </div>
     </>
-
-
   );
-
-
 }
 
 export default Header;

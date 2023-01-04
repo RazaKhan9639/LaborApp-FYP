@@ -12,6 +12,7 @@ import pest from "./assets/pest.png";
 import cardetail from "./assets/carDetailing.png";
 import cleaning from "./assets/cleaning.png";
 import "./services.css";
+import { NavLink } from "react-router-dom";
 
 const Service = () => {
   return (
@@ -26,7 +27,7 @@ const Service = () => {
             <div className="cl-12">
               <ul className="services-cards no-disc">
                 <li className="sc-item">
-                  <a href="/ACcategories">
+                  <NavLink to="/ACcategories">
                     <img
                       loading="lazy"
                       src={img}
@@ -35,10 +36,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Ac Services</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/plumbing">
+                  <NavLink to="/plumbing">
                     <img
                       loading="lazy"
                       src={plumber}
@@ -47,10 +48,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Plumber</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/carservices">
+                  <NavLink to="/carservices">
                     <img
                       loading="lazy"
                       src={car}
@@ -59,10 +60,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Car</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/electrician">
+                  <NavLink to="/electrician">
                     <img
                       loading="lazy"
                       src={electrician}
@@ -71,10 +72,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Electrician</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/handyman">
+                  <NavLink to="/handyman">
                     <img
                       loading="lazy"
                       src={handyman}
@@ -83,10 +84,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Handyman</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/painting">
+                  <NavLink to="/painting">
                     <img
                       loading="lazy"
                       src={painter}
@@ -95,10 +96,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Painter</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/carpenter">
+                  <NavLink to="/carpenter">
                     <img
                       loading="lazy"
                       src={carpenter}
@@ -107,10 +108,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Carpenter</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/homeappliance">
+                  <NavLink to="/homeappliance">
                     <img
                       loading="lazy"
                       src={homeappliance}
@@ -119,10 +120,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Home Appliances</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/geyser">
+                  <NavLink to="/geyser">
                     <img
                       loading="lazy"
                       src={geyser}
@@ -131,10 +132,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Geyser</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/pestcontrol">
+                  <NavLink to="/pestcontrol">
                     <img
                       loading="lazy"
                       src={pest}
@@ -143,10 +144,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">PestControl</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/cardetailing">
+                  <NavLink to="/cardetailing">
                     <img
                       loading="lazy"
                       src={cardetail}
@@ -155,10 +156,10 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Car Detailing</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="sc-item">
-                  <a href="/homecleaning">
+                  <NavLink to="/homecleaning">
                     <img
                       loading="lazy"
                       src={cleaning}
@@ -167,7 +168,7 @@ const Service = () => {
                       width={69}
                     />
                     <p className="li_Class">Cleaning</p>
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>
