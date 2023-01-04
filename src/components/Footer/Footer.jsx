@@ -1,5 +1,6 @@
 import React from "react";
 import { FaTiktok, FaGoogle, FaFacebook, FaInstagram } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 import "./footer.css";
 
@@ -12,16 +13,16 @@ function Footer() {
             <h4>Labour App</h4>
             <ul>
               <li>
-                <a href="#">about us</a>
+                <NavLink to="#">about us</NavLink>
               </li>
               <li>
-                <a href="#">our services</a>
+                <NavLink to="#">our services</NavLink>
               </li>
               <li>
-                <a href="#">privacy policy</a>
+                <NavLink to="#">privacy policy</NavLink>
               </li>
               <li>
-                <a href="#">affiliate program</a>
+                <NavLink to="#">affiliate program</NavLink>
               </li>
             </ul>
           </div>
@@ -29,19 +30,19 @@ function Footer() {
             <h4>get help</h4>
             <ul>
               <li>
-                <a href="#">FAQ</a>
+                <NavLink to="#">FAQ</NavLink>
               </li>
               <li>
-                <a href="#">shipping</a>
+                <NavLink to="#">shipping</NavLink>
               </li>
               <li>
-                <a href="#">returns</a>
+                <NavLink to="#">returns</NavLink>
               </li>
               <li>
-                <a href="#">order status</a>
+                <NavLink to="#">order status</NavLink>
               </li>
               <li>
-                <a href="#">payment options</a>
+                <NavLink to="#">payment options</NavLink>
               </li>
             </ul>
           </div>
@@ -49,34 +50,34 @@ function Footer() {
             <h4>online shop</h4>
             <ul>
               <li>
-                <a href="#">watch</a>
+                <NavLink to="#">watch</NavLink>
               </li>
               <li>
-                <a href="#">bag</a>
+                <NavLink to="#">bag</NavLink>
               </li>
               <li>
-                <a href="#">shoes</a>
+                <NavLink to="#">shoes</NavLink>
               </li>
               <li>
-                <a href="#">dress</a>
+                <NavLink to="#">dress</NavLink>
               </li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>follow us</h4>
             <div className="social-links">
-              <a href="#">
+              <NavLink to="#">
                 <FaGoogle />
-              </a>
-              <a href="#">
+              </NavLink>
+              <NavLink to="#">
                 <FaTiktok />
-              </a>
-              <a href="#">
+              </NavLink>
+              <NavLink to="#">
                 <FaInstagram />
-              </a>
-              <a href="#">
+              </NavLink>
+              <NavLink to="#">
                 <FaFacebook />
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
