@@ -1,14 +1,22 @@
 * {
-  font-family: "Poppins", sans-serif, ;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.App {
-  /* text-align: center; */
-}
-
 .MuiFormHelperText-root {
   color: #ac2132 !important;
+}
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+::-webkit-scrollbar-track {
+  background: #3a3b69;
+}
+::-webkit-scrollbar-thumb {
+  background: #ac2132;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  background-clip: border-box;
 }
