@@ -24,6 +24,7 @@ import Electrician from "./components/Categories/ElectricianServices";
 import Carpenter from "./components/Categories/CarpenterServices";
 import CarDetailing from "./components/Categories/CarDetailing";
 import PainterServices from "./components/Categories/PainterServices";
+import GoToTop from "./components/TopButton/GoToTop";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
             <Route path="/cardetailing" element={<CarDetailing />} />
             <Route path="/painting" element={<PainterServices />} />
           </Routes>
+          <GoToTop />
           <Footer />
         </Router>
       </div>
