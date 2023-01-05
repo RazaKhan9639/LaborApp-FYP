@@ -52,8 +52,8 @@ const CustomerReview = () => {
           {Data &&
             Data.map((item, index) => {
               return (
-                <div className="cl-12">
-                  <div className="review-card" key={index}>
+                <div className="cl-12" key={index}>
+                  <div className="review-card" key={item.id}>
                     <div className="review-card-inner">
                       <div className="reviewer">
                         <div className="reviewer-img">

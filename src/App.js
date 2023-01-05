@@ -38,8 +38,6 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="*" element={<h1>404 Not Found</h1>} />
             <Route path="/home" element={<Home />} />
-            {/* <Route path="/header" element={<Header />} />
-            <Route path="/footer" element={<Footer />} /> */}
 
             <Route path="/faqs" element={<FAQS data={FAQSData} />} />
             <Route path="/about" element={<About />} />
