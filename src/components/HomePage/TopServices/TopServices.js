@@ -63,9 +63,9 @@ const TopServices = () => {
             <div className="cl-7">
               <Slider {...settings}>
                 {data &&
-                  data.map((item) => {
+                  data.map((item, index) => {
                     return (
-                      <div className="ts-card">
+                      <div className="ts-card" key={index}>
                         <div className="cardDiv" key={item.id}>
                           <div className="card-top">
                             <img

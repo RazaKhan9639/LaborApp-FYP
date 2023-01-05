@@ -95,10 +95,7 @@ h2 {
   color: #ac2132;
   font-size: 1rem;
 }
-/* .star-image img {
-  width: 1.5rem;
-  height: 1.5rem;
-} */
+
 @media (min-width: 768px) {
   .greyed-box {
     padding: 44px 32px;

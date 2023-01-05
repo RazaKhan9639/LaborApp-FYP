@@ -22,11 +22,11 @@ function Header() {
             </li>
             <li>
               {/* <a href="#">Services</a> */}
-              <span class="dropdown">
+              <span className="dropdown">
                 <NavLink to="/#" class="dropbtn">
                   Services
                 </NavLink>
-                <span class="dropdown-content">
+                <span className="dropdown-content">
                   <NavLink to="/home">Link 1</NavLink>
                   <NavLink to="/home">Link 2</NavLink>
                   <NavLink to="/home">Link 3</NavLink>
@@ -52,11 +52,11 @@ function Header() {
         </NavLink>
         <NavLink className="menu cta">Menu</NavLink>
       </header>
-      <div id="mobile__menu" class="overlay">
-        <NavLink to="/#" class="close">
+      <div id="mobile__menu" className="overlay">
+        <NavLink to="/#" className="close">
           &times;
         </NavLink>
-        <div class="overlay__content">
+        <div className="overlay__content">
           <NavLink to="/#">Services</NavLink>
           <NavLink to="/#">Hiring</NavLink>
           <NavLink to="/#">About</NavLink>

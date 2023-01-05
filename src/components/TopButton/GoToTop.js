@@ -20,6 +20,7 @@ const GoToTop = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
   }, []);
   return (
     <section className="top-btn-section">
