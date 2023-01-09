@@ -1,0 +1,37 @@
+.products {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  row-gap: 5px;
+}
+.SProvider__Heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 50px;
+  color: #ac2132;
+  text-transform: capitalize;
+}
+#Order_btn {
+  color: #ac2132;
+  border: 1px solid #5b6baa;
+}
+#Order_btn:hover {
+  color: #5b6baa;
+  background-color: #ac2132;
+  border: 1px solid #5b6baa;
+  font-weight: bold;
+}
+#cart_btn {
+  color: #ac2132;
+  border: 1px solid #ac2132;
+  background-color: #5b6baa;
+}
+#cart_btn:hover {
+  color: #5b6baa;
+  background-color: #ac2132;
+  border: 1px solid #5b6baa;
+  font-weight: bold;
+}

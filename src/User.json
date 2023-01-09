@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "name": "John",
+    "Experience": "5",
+    "ServiceName": "Barber",
+    "Contact": 1234567890,
+    "city": "New York",
+    "image": "/Images/1.jpg",
+    "amount": 1000,
+    "discount": 200,
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "name": "Peter",
+    "ServiceName": "Barber",
+    "Contact": 1234567890,
+    "Experience": "5",
+    "city": "Boston",
+    "image": "/Images/1.jpg",
+    "amount": 1000,
+    "rating": 4.5
+  },
+  {
+    "id": 3,
+    "name": "Sally",
+    "ServiceName": "Barber",
+    "Contact": 1234567890,
+    "Experience": "5",
+    "city": "Los Angeles",
+    "image": "/Images/1.jpg",
+    "amount": 1000,
+    "rating": 4.5
+  },
+  {
+    "id": 4,
+    "name": "Richard",
+    "ServiceName": "Barber",
+    "Contact": 1234567890,
+    "Experience": "5",
+    "city": "Chicago",
+    "image": "/Images/1.jpg",
+    "amount": 1000,
+    "discount": 200,
+    "rating": 4.5
+  },
+  {
+    "id": 5,
+    "name": "Susan",
+    "ServiceName": "Barber",
+    "Contact": 1234567890,
+    "Experience": "5",
+    "city": "Houston",
+    "image": "/Images/1.jpg",
+    "amount": 1000,
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "name": "Vicky",
+    "ServiceName": "Barber",
+    "Contact": 1234567890,
+    "Experience": "5",
+    "city": "Philadelphia",
+    "image": "/Images/1.jpg",
+    "amount": 1000,
+    "rating": 4.5
+  },
+  {
+    "id": 7,
+    "name": "Ben",
+    "ServiceName": "Barber",
+    "Contact": 1234567890,
+    "Experience": "5",
+    "city": "Phoenix",
+    "image": "/Images/1.jpg",
+    "amount": 1000,
+    "discount": 200,
+    "rating": 4.5
+  },
+  {
+    "id": 8,
+    "name": "William",
+    "ServiceName": "Barber",
+    "Contact": 1234567890,
+    "Experience": "5",
+    "city": "San Antonio",
+    "image": "/Images/1.jpg",
+    "amount": 1000,
+    "discount": 200,
+    "rating": 4.5
+  },
+  {
+    "id": 9,
+    "name": "Chuck",
+    "ServiceName": "Barber",
+    "Contact": 1234567890,
+    "Experience": "5",
+    "city": "San Diego",
+    "image": "/Images/1.jpg",
+    "amount": 1000,
+    "rating": 4.5
+  },
+  {
+    "id": 10,
+    "name": "Viola",
+    "ServiceName": "Barber",
+    "Contact": 1234567890,
+    "Experience": "5",
+    "city": "Dallas",
+    "image": "/Images/1.jpg",
+    "amount": 1000,
+    "discount": 200,
+    "rating": 4.5
+  }
+]
