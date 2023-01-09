@@ -25,40 +25,47 @@ import Carpenter from "./components/Categories/CarpenterServices";
 import CarDetailing from "./components/Categories/CarDetailing";
 import PainterServices from "./components/Categories/PainterServices";
 import GoToTop from "./components/TopButton/GoToTop";
+import ServiceProvider from "./Pages/User/ServiceProvider";
+import Cart from "./Pages/Cart/Cart";
+import UserContextProvider from "./context/UserContext";
 
 function App() {
   return (
     <>
       <div className="App">
-        <Router>
-          <Header />
-          <Routes>
-            <Route path="/" element={<SignInOutContainer />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="*" element={<h1>404 Not Found</h1>} />
-            <Route path="/home" element={<Home />} />
+        <UserContextProvider>
+          <Router>
+            <Header />
+            <Routes>
+              <Route path="/" element={<SignInOutContainer />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="*" element={<h1>404 Not Found</h1>} />
+              <Route path="/home" element={<Home />} />
 
-            <Route path="/faqs" element={<FAQS data={FAQSData} />} />
-            <Route path="/about" element={<About />} />
+              <Route path="/faqs" element={<FAQS data={FAQSData} />} />
+              <Route path="/about" element={<About />} />
 
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/ACcategories" element={<Categories />} />
-            <Route path="/carservices" element={<CarServices />} />
-            <Route path="/plumbing" element={<PlumbingServices />} />
-            <Route path="/pestcontrol" element={<PestControlServices />} />
-            <Route path="/homeappliance" element={<HomeAppliance />} />
-            <Route path="/handyman" element={<Handyman />} />
-            <Route path="/homecleaning" element={<HomeCleaning />} />
-            <Route path="/geyser" element={<Geyser />} />
-            <Route path="/electrician" element={<Electrician />} />
-            <Route path="/carpenter" element={<Carpenter />} />
-            <Route path="/cardetailing" element={<CarDetailing />} />
-            <Route path="/painting" element={<PainterServices />} />
-          </Routes>
-          <GoToTop />
-          <Footer />
-        </Router>
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/ACcategories" element={<Categories />} />
+              <Route path="/carservices" element={<CarServices />} />
+              <Route path="/plumbing" element={<PlumbingServices />} />
+              <Route path="/pestcontrol" element={<PestControlServices />} />
+              <Route path="/homeappliance" element={<HomeAppliance />} />
+              <Route path="/handyman" element={<Handyman />} />
+              <Route path="/homecleaning" element={<HomeCleaning />} />
+              <Route path="/geyser" element={<Geyser />} />
+              <Route path="/electrician" element={<Electrician />} />
+              <Route path="/carpenter" element={<Carpenter />} />
+              <Route path="/cardetailing" element={<CarDetailing />} />
+              <Route path="/painting" element={<PainterServices />} />
+              <Route path="/serviceprovider" element={<ServiceProvider />} />
+              <Route path="/cart" element={<Cart />} />
+            </Routes>
+            <GoToTop />
+            <Footer />
+          </Router>
+        </UserContextProvider>
       </div>
     </>
   );
