@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import "./ServiceProvider.css";
+import Star from "../../components/Rating/Star";
 
 const Product = (props) => {
   const navigate = useNavigate();
@@ -16,12 +17,17 @@ const Product = (props) => {
     city,
     rating,
     discount,
+    reviews,
   } = props.data;
   const { addToCart, cartItem } = useContext(UserContext);
   const cartItemAmount = cartItem[id];
   return (
-    <section style={{ backgroundColor: "#eee" }}>
-      <div className="container py-5">
+    <section
+      style={{
+        backgroundColor: "#cbd6e5",
+      }}
+    >
+      <div className="container py-5 ">
         <div className="row justify-content-center mb-3">
           <div className="col-md-12 col-xl-10">
             <div className="card shadow-0 border rounded-3">
@@ -47,10 +53,11 @@ const Product = (props) => {
                     </div>
                   </div>
                   <div className="col-md-6 col-lg-6 col-xl-6">
-                    <h5>{name}</h5>
+                    <h5 className="User_List_Name">{name}</h5>
                     <div className="d-flex flex-row">
-                      <div className="text-danger mb-1 me-2">{rating}</div>
-                      <span>(310 Reviews)</span>
+                      <div className="text-danger mb-1 me-2">
+                        <Star stars={rating} reviews={reviews} />
+                      </div>
                     </div>
                     <div className="mt-1 mb-0 text-muted small">
                       <span>
@@ -101,11 +108,13 @@ const Product = (props) => {
                   <div className="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                     <div className="d-flex flex-row align-items-center mb-1">
                       <h4 className="mb-1 me-1"> Rs:{amount}</h4>
-                      <span className="text-danger">
-                        <s>Rs:{discount}</s>
-                      </span>
+                      {discount && discount > 0 && (
+                        <span className="text-danger">
+                          <s>Rs:{discount}</s>
+                        </span>
+                      )}
                     </div>
-                    <h6 className="text-success">Good Service</h6>
+                    <h6 className="text-success">Provide Good Services</h6>
                     <div className="d-flex flex-column mt-4">
                       <button
                         className="btn btn-primary btn-sm "

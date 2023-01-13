@@ -1,64 +1,66 @@
 [
   {
     "id": 1,
-    "name": "John",
+    "name": "Raza Mohayyuddin",
     "Experience": "5",
     "ServiceName": "Barber",
     "Contact": 1234567890,
     "city": "New York",
     "image": "/Images/1.jpg",
-    "amount": 1000,
-    "discount": 200,
-    "rating": 4.5
+    "amount": 500,
+    "discount": 800,
+    "rating": 4
   },
   {
     "id": 2,
-    "name": "Peter",
+    "name": "Nadeem",
     "ServiceName": "Barber",
     "Contact": 1234567890,
     "Experience": "5",
     "city": "Boston",
     "image": "/Images/1.jpg",
-    "amount": 1000,
-    "rating": 4.5
+    "amount": 500,
+    "discount": 800,
+    "rating": 3
   },
   {
     "id": 3,
-    "name": "Sally",
+    "name": "Naeem",
     "ServiceName": "Barber",
     "Contact": 1234567890,
     "Experience": "5",
     "city": "Los Angeles",
     "image": "/Images/1.jpg",
     "amount": 1000,
-    "rating": 4.5
+    "rating": 5
   },
   {
     "id": 4,
-    "name": "Richard",
-    "ServiceName": "Barber",
+    "name": "Talha",
+    "ServiceName": "Electrician",
     "Contact": 1234567890,
     "Experience": "5",
     "city": "Chicago",
     "image": "/Images/1.jpg",
-    "amount": 1000,
-    "discount": 200,
-    "rating": 4.5
+    "amount": 500,
+    "discount": 800,
+    "rating": 4
   },
   {
     "id": 5,
-    "name": "Susan",
+    "name": "Affaq Ahmad",
     "ServiceName": "Barber",
     "Contact": 1234567890,
     "Experience": "5",
     "city": "Houston",
     "image": "/Images/1.jpg",
-    "amount": 1000,
-    "rating": 4.5
+    "amount": 500,
+    "discount": 800,
+    "rating": 3.5
   },
   {
     "id": 6,
-    "name": "Vicky",
+    "name": "Hammad Ahmad",
     "ServiceName": "Barber",
     "Contact": 1234567890,
     "Experience": "5",
@@ -69,49 +71,51 @@
   },
   {
     "id": 7,
-    "name": "Ben",
+    "name": "Muzammil",
     "ServiceName": "Barber",
     "Contact": 1234567890,
     "Experience": "5",
     "city": "Phoenix",
     "image": "/Images/1.jpg",
-    "amount": 1000,
-    "discount": 200,
+    "amount": 500,
+    "discount": 800,
     "rating": 4.5
   },
   {
     "id": 8,
-    "name": "William",
+    "name": "Mobeen",
     "ServiceName": "Barber",
     "Contact": 1234567890,
     "Experience": "5",
     "city": "San Antonio",
     "image": "/Images/1.jpg",
-    "amount": 1000,
-    "discount": 200,
+    "amount": 500,
+    "discount": 800,
     "rating": 4.5
   },
   {
     "id": 9,
-    "name": "Chuck",
+    "name": "M.Abrar",
     "ServiceName": "Barber",
     "Contact": 1234567890,
     "Experience": "5",
     "city": "San Diego",
     "image": "/Images/1.jpg",
-    "amount": 1000,
-    "rating": 4.5
+    "amount": 500,
+    "rating": 4,
+    "reviews": 110
   },
   {
     "id": 10,
-    "name": "Viola",
+    "name": "Mazhar",
     "ServiceName": "Barber",
     "Contact": 1234567890,
     "Experience": "5",
     "city": "Dallas",
     "image": "/Images/1.jpg",
-    "amount": 1000,
-    "discount": 200,
-    "rating": 4.5
+    "amount": 500,
+    "discount": 800,
+    "rating": 4.5,
+    "reviews": 310
   }
 ]

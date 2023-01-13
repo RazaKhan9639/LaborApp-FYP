@@ -1,0 +1,10 @@
+.rating-section {
+  justify-content: flex-start;
+}
+.star_icon {
+  color: #ac2132;
+  font-size: 20px;
+}
+.empty_icon {
+  font-size: 2.6rem;
+}

@@ -35,3 +35,14 @@
   border: 1px solid #5b6baa;
   font-weight: bold;
 }
+#cart_btn:disabled {
+  color: #ac2132;
+  border: 1px solid #ac2132;
+  background-color: #5b6baa;
+}
+.User_List_Name {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #3a396b;
+  text-transform: capitalize;
+}
