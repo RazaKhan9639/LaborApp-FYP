@@ -46,3 +46,72 @@
   color: #3a396b;
   text-transform: capitalize;
 }
+.User_List_Last_Section {
+  background-color: #cbd6e5;
+  color: #ac2132;
+  border-radius: 10px;
+  border: 1px solid #5b6baa;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+.user_LastSection_Heading {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.user_Points {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  row-gap: 5px;
+  margin-top: 10px;
+}
+.user_point1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  padding: auto;
+  padding-bottom: 20px;
+}
+.Heading_LastSec {
+  font-size: 20px;
+  font-weight: bold;
+}
+.user_point1 p {
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+  color: #3a396b;
+}
+.User_point_icon {
+  font-size: 30px;
+  color: #3a396b;
+}
+.User_lastSection_Button {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  margin-top: 10px;
+}
+.U_btn {
+  color: #ac2132;
+  border: 1px solid #5b6baa;
+  background-color: #5b6baa;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+.U_btn:hover {
+  color: #5b6baa;
+  background-color: #ac2132;
+  border: 1px solid #5b6baa;
+  font-weight: bold;
+}
