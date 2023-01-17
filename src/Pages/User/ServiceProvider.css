@@ -66,7 +66,7 @@
 }
 .user_Points {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   place-items: center;
   row-gap: 5px;
   margin-top: 10px;
@@ -114,4 +114,47 @@
   background-color: #ac2132;
   border: 1px solid #5b6baa;
   font-weight: bold;
+}
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border: 1px solid #5b6baa;
+  border-radius: 15px;
+  color: #ac2132;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.paginationBttns a:hover {
+  color: #5b6baa;
+  background-color: #ac2132;
+  border: 1px solid #5b6baa;
+}
+.paginationActive a {
+  color: #5b6baa;
+  background-color: #ac2132;
+  border: 1px solid #5b6baa;
+}
+.previousBttn {
+  margin-right: 10px;
+  background-color: #5b6baa;
+  color: #ac2132;
+  text-decoration: none;
+}
+.nextBttn {
+  margin-left: 10px;
+  background-color: #5b6baa;
+  color: #ac2132;
+  text-decoration: none;
+}
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
