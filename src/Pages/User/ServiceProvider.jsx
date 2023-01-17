@@ -2,12 +2,18 @@ import React from "react";
 import Data from "../../User.json";
 import User from "./User";
 import "./ServiceProvider.css";
-import { AiOutlineDollar } from "react-icons/ai";
-import { HiUsers } from "react-icons/hi";
-import { TiTick } from "react-icons/ti";
-import { useNavigate } from "react-router-dom";
+import ServiceProviderLastSection from "./ServiceProviderLastSection";
+
+import ReactPaginate from "react-paginate";
 const Shop = () => {
-  const navigate = useNavigate();
+  const [pageNumber, setPageNumber] = React.useState(0);
+  const usersPerPage = 6;
+  const pagesVisited = pageNumber * usersPerPage;
+  const displayUsers = Data.slice(pagesVisited, pagesVisited + usersPerPage);
+  const pageCount = Math.ceil(Data.length / usersPerPage);
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
   return (
     <>
       <div className="shop">
@@ -15,52 +21,25 @@ const Shop = () => {
           <h1 className="SProvider__Heading">Our Service Providers</h1>
         </div>
         <div className="products">
-          {Data.map((product) => (
+          {displayUsers.map((product) => (
             <User data={product} key={product.id} />
           ))}
         </div>
+        <div className="pagination">
+          <ReactPaginate
+            previousLabel={"<Previous"}
+            nextLabel={"Next>"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"paginationBttns"}
+            previousLinkClassName={"previousBttn"}
+            nextLinkClassName={"nextBttn"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+          />
+        </div>
       </div>
-      <section className="User_List_Last_Section">
-        <div className="user_LastSection_Heading">
-          <h3>Why hire Professional on Labor?</h3>
-        </div>
-        <div className="user_Points">
-          <div className="user_point1">
-            <span className="User_point_icon">
-              <AiOutlineDollar />
-            </span>
-            <h4 className="Heading_LastSec">Free to Use</h4>
-            <p className="Paragraph_LastSection">
-              You Never pay to use Labor: Get Cost estimate,contact
-              professional, and even book the job-all for no cost{" "}
-            </p>
-          </div>
-          <div className="user_point1">
-            <span className="User_point_icon">
-              <HiUsers />
-            </span>
-            <h4 className="Heading_LastSec">Compare Price side-by-side</h4>
-            <p className="Paragraph_LastSection">
-              You'll know much cost your project will be before you hire a pro.
-            </p>
-          </div>
-          <div className="user_point1">
-            <span className="User_point_icon">
-              <TiTick />
-            </span>
-            <h4 className="Heading_LastSec">Hire with confidence</h4>
-            <p className="Paragraph_LastSection">
-              with acess to 1M+ customer reviews and the pros' work history,
-              you'll have all the info you need to make a hire.
-            </p>
-          </div>
-        </div>
-        <div className="User_lastSection_Button">
-          <button className="U_btn" onClick={() => navigate("/")}>
-            Get Started
-          </button>
-        </div>
-      </section>
+      <ServiceProviderLastSection />
     </>
   );
 };
