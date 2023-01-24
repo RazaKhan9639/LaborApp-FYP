@@ -50,6 +50,10 @@ function Header() {
         <NavLink className="cta" to="/#">
           Login/SignUp
         </NavLink>
+        <NavLink to="/#" className="cta">
+          Become Labor
+        </NavLink>
+
         <NavLink className="menu cta">Menu</NavLink>
       </header>
       <div id="mobile__menu" className="overlay">

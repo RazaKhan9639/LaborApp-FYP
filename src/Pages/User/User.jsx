@@ -133,6 +133,15 @@ const Product = (props) => {
                           type="button"
                           onClick={() => addToCart(id)}
                         >
+                          Select And Continue
+                        </button>
+
+                        {/* <button
+                          className="btn btn-primary btn-sm "
+                          id="cart_btn"
+                          type="button"
+                          onClick={() => addToCart(id)}
+                        >
                           Add{cartItemAmount > 0 && <>({cartItemAmount})</>}
                         </button>
                         <button
@@ -142,7 +151,7 @@ const Product = (props) => {
                           onClick={() => navigate("/cart")}
                         >
                           View Your Order
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>

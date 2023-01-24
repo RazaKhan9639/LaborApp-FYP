@@ -28,6 +28,7 @@ import GoToTop from "./components/TopButton/GoToTop";
 import ServiceProvider from "./Pages/User/ServiceProvider";
 import Cart from "./Pages/Cart/Cart";
 import UserContextProvider from "./context/UserContext";
+import ServiceCategoriesPage from "./components/service_Categories_Page/ServiceCategoriesPage";
 
 function App() {
   return (
@@ -61,6 +62,10 @@ function App() {
               <Route path="/painting" element={<PainterServices />} />
               <Route path="/serviceprovider" element={<ServiceProvider />} />
               <Route path="/cart" element={<Cart />} />
+              <Route
+                path="/cardetailing/:id"
+                element={<ServiceCategoriesPage />}
+              />
             </Routes>
             <GoToTop />
             <Footer />
