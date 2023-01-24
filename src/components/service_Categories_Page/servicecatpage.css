@@ -1,0 +1,245 @@
+.scpImgContainer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.scpImgWrapper {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.scpImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+  transition: none;
+}
+.scpCardTextBox {
+  padding: 3rem 1rem;
+  min-height: 24rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.scpCardDetail {
+  padding: 1rem 2rem 1.5rem;
+  background-color: rgb(255, 255, 255);
+  min-height: 228px;
+  max-width: 550px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+.scpTitle {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #5b6be5;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.scpTitleSeperator {
+  width: 50px;
+  border-top: 1px solid #ac2132;
+  margin: 1rem auto;
+}
+.scpSubTitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #848a93;
+}
+.scpCardDetail a {
+  text-decoration: none;
+}
+.BookNowBtn {
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+  padding: 0.5rem 2rem;
+  font-size: 1.1875rem;
+  font-weight: 600;
+  border-color: #ac2132;
+  background-color: #ac2132;
+  color: #5b6be5;
+  text-align: center;
+  /* display: block; */
+}
+.BookNowBtn:hover {
+  background-color: #5b6be5;
+  color: #ac2132;
+  text-decoration: none;
+}
+.secondSectionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dcdfe3;
+}
+.textArea {
+  flex: 2.5;
+}
+.scpMinorDetail {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #848a93;
+  padding: 1.5rem;
+  margin-left: 10px;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  display: block;
+  text-align: left;
+}
+.scpTitle2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5b6be5;
+  padding-bottom: 2rem;
+  margin-left: 13px;
+}
+.scpImg {
+  flex: 1.5;
+  margin-left: 3rem;
+  margin-top: 5rem;
+}
+.scpImg1 {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center center;
+
+  margin-bottom: 10px;
+}
+.thirdSectionContainer {
+  background-color: rgb(249, 250, 251);
+}
+.thirdSectionWrapper {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.thirdSectionDiv1 {
+  max-width: 1200px;
+  margin: 0px auto;
+  position: relative;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.thirdSectionDiv2 {
+  -webkit-box-pack: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+.HowItWorks {
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #5b6be5;
+}
+.HowItWorks__StepsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.HowItWorksStep__ColumnContainer {
+  flex-direction: column;
+  text-align: left;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 321px;
+}
+.HowItWorksStep__TitleContainer {
+  margin-top: 0.5rem;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+.HowItWorksStep__Position {
+  color: rgb(134, 145, 157);
+  font-size: 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgb(134, 145, 157);
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 25px;
+  line-height: 25px;
+  height: 25px;
+  flex-basis: 25px;
+  flex-shrink: 0;
+  font-weight: 400;
+  margin-right: 0.5rem;
+  margin-top: 3px;
+}
+.HowItWorksStep__Title {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.HowItWorksStep__Description {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  width: 100%;
+  color: rgb(61, 70, 61);
+}
+.HowItWorksStep__ColumnContainer {
+  flex-direction: column;
+  text-align: left;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 321px;
+}
+.BookNowBtn2 {
+  border-radius: 0.5rem;
+
+  padding: 0.5rem 2rem;
+  font-size: 1.1875rem;
+  font-weight: 600;
+
+  background-color: #ac2132;
+  color: #5b6be5;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+.BookNowBtn2:hover {
+  background-color: #5b6be5;
+  color: #ac2132;
+  text-decoration: none;
+}
