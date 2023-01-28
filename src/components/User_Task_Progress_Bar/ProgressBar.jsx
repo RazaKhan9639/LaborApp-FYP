@@ -7,7 +7,8 @@ import { UserContext } from "../../context/UserContext";
 import "./ProgressBar.css";
 import DescribeTask from "./../DescribeTask/DescribeTask";
 import Shop from "../../Pages/User/ServiceProvider";
-import DateAndTime from "../DateAndTime/DateAndTime";
+
+import ConfirmDetail from "./../ConfirmDetails/ConfirmDetail";
 
 const ProgressBar = () => {
   const { step, finalData } = useContext(UserContext);
@@ -20,11 +21,35 @@ const ProgressBar = () => {
         return <Shop />;
 
       case 2:
-        return <DateAndTime />;
+        return <ConfirmDetail />;
 
       default:
         return "Not Page Found";
     }
+  };
+
+  const style = {
+    "& .MuiStepLabel-root .Mui-completed": {
+      color: "#ac2132", // circle color (COMPLETED)
+    },
+    "& .MuiStepLabel-label.Mui-completed.MuiStepLabel-alternativeLabel": {
+      color: "#3a396b", // Just text label (COMPLETED)
+      fontWeight: "bold",
+    },
+    "& .MuiStepLabel-root .Mui-active": {
+      color: "#3a396b", // circle color (ACTIVE)
+    },
+    "& .MuiStepLabel-label.Mui-active.MuiStepLabel-alternativeLabel": {
+      color: "#ac2132", // Just text label (ACTIVE)
+      fontWeight: "bold",
+    },
+    "& .MuiStepLabel-root .Mui-disabled": {
+      fontWeight: "bold",
+    },
+    "& .MuiStepLabel-root .Mui-active .MuiStepIcon-text": {
+      fill: "#cbd6e5", // circle's number (ACTIVE)
+      fontWeight: "bold",
+    },
   };
 
   return (
@@ -35,22 +60,23 @@ const ProgressBar = () => {
             activeStep={step}
             alternativeLabel
             style={{
-              width: "60%",
+              width: "80%",
               margin: "auto",
               padding: "10px",
+              fontWeight: "bold",
             }}
             orientation="horizontal"
           >
-            <Step>
+            <Step sx={style}>
               <StepLabel>Describe Your Task</StepLabel>
             </Step>
-            <Step>
+            <Step sx={style}>
               <StepLabel>Browse Labor & Price</StepLabel>
             </Step>
-            <Step>
+            <Step sx={style}>
               <StepLabel>Choose Date & Time</StepLabel>
             </Step>
-            <Step>
+            <Step sx={style}>
               <StepLabel>Confirm Details</StepLabel>
             </Step>
           </Stepper>
