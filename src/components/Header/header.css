@@ -48,7 +48,7 @@ header {
   padding: 6px 15px;
   background-color: #ac2132;
   border: none;
-  border-radius: 50px;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
   font-weight: 600;

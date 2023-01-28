@@ -7,7 +7,7 @@ import ServiceProviderLastSection from "./ServiceProviderLastSection";
 import ReactPaginate from "react-paginate";
 const Shop = () => {
   const [pageNumber, setPageNumber] = React.useState(0);
-  const usersPerPage = 6;
+  const usersPerPage = 10;
   const pagesVisited = pageNumber * usersPerPage;
   const displayUsers = Data.slice(pagesVisited, pagesVisited + usersPerPage);
   const pageCount = Math.ceil(Data.length / usersPerPage);

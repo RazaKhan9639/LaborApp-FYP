@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./ServiceProvider.css";
 import Star from "../../components/Rating/Star";
+import DateAndTime from "../../components/DateAndTime/DateAndTime";
+import { Modal, ModalHeader, ModalBody } from "reactstrap";
 
 const Product = (props) => {
-  const navigate = useNavigate();
   const {
     id,
     name,
@@ -19,10 +20,28 @@ const Product = (props) => {
     discount,
     reviews,
   } = props.data;
-  const { addToCart, cartItem } = useContext(UserContext);
-  const cartItemAmount = cartItem[id];
+
+  const { cartItem, step, setStep, modal, setModal } = useContext(UserContext);
+  // const cartItemAmount = cartItem[id];
+  const handleModalAndStep = () => {
+    setModal(!modal);
+    // setStep(step + 1);
+  };
+
   return (
     <>
+      <div className="dateTimeModal">
+        <Modal size="lg" isOpen={modal} toggle={() => setModal(!modal)}>
+          <ModalHeader toggle={() => setModal(!modal)}>
+            <p style={{ fontSize: "25px", color: "#ac2132" }}>
+              Choose your suitable date and time for task:
+            </p>
+          </ModalHeader>
+          <ModalBody>
+            <DateAndTime name={name} image={image} />
+          </ModalBody>
+        </Modal>
+      </div>
       <section
         style={{
           backgroundColor: "#cbd6e5",
@@ -131,27 +150,11 @@ const Product = (props) => {
                           className="btn btn-primary btn-sm "
                           id="cart_btn"
                           type="button"
-                          onClick={() => addToCart(id)}
+                          // onClick={() => handleModal()}
+                          onClick={() => handleModalAndStep()}
                         >
                           Select And Continue
                         </button>
-
-                        {/* <button
-                          className="btn btn-primary btn-sm "
-                          id="cart_btn"
-                          type="button"
-                          onClick={() => addToCart(id)}
-                        >
-                          Add{cartItemAmount > 0 && <>({cartItemAmount})</>}
-                        </button>
-                        <button
-                          className="btn  btn-sm mt-2 "
-                          type="button"
-                          id="Order_btn"
-                          onClick={() => navigate("/cart")}
-                        >
-                          View Your Order
-                        </button> */}
                       </div>
                     </div>
                   </div>
