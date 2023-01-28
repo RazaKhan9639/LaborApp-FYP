@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Calendar } from "react-date-range";
 import { addDays } from "date-fns";
 import format from "date-fns/format";
@@ -6,7 +6,7 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import "./dateTime.css";
 // import img from "./1.jpg";
-// import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../context/UserContext";
 
 const DateAndTime = ({ image, name }) => {
   const [date, setDate] = useState(new Date());
@@ -15,7 +15,7 @@ const DateAndTime = ({ image, name }) => {
   const [selectedTime, setSelectedTime] = useState(new Date());
   const [selectedDateTime, setSelectedDateTime] = useState(new Date());
   const [selectedDateTimeString, setSelectedDateTimeString] = useState("");
-
+  const { step, setStep } = useContext(UserContext);
   return (
     <>
       <div className="dateAndTimeContainer">
@@ -66,7 +66,10 @@ const DateAndTime = ({ image, name }) => {
         <div className="DetailSection1">
           <p>Requested For:</p>
           <p>Date And Time</p>
-          <button className="RequestBtn"> Select and Continue</button>
+          <button className="RequestBtn" onClick={() => setStep(step + 2)}>
+            {" "}
+            Select and Continue
+          </button>
         </div>
       </div>
     </>

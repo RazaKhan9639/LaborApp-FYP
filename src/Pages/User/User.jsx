@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { UserContext } from "../../context/UserContext";
+import React, { useState } from "react";
+// import { UserContext } from "../../context/UserContext";
 import { Link } from "react-router-dom";
 import "./ServiceProvider.css";
 import Star from "../../components/Rating/Star";
@@ -7,6 +7,7 @@ import DateAndTime from "../../components/DateAndTime/DateAndTime";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
 
 const Product = (props) => {
+  const [modal, setModal] = useState(false);
   const {
     id,
     name,
@@ -21,12 +22,12 @@ const Product = (props) => {
     reviews,
   } = props.data;
 
-  const { cartItem, step, setStep, modal, setModal } = useContext(UserContext);
+  // const { cartItem, step, setStep, modal, setModal } = useContext(UserContext);
   // const cartItemAmount = cartItem[id];
-  const handleModalAndStep = () => {
-    setModal(!modal);
-    // setStep(step + 1);
-  };
+  // const handleModalAndStep = () => {
+  //   setModal(!modal);
+  //   // setStep(step + 1);
+  // };
 
   return (
     <>
@@ -150,8 +151,8 @@ const Product = (props) => {
                           className="btn btn-primary btn-sm "
                           id="cart_btn"
                           type="button"
-                          // onClick={() => handleModal()}
-                          onClick={() => handleModalAndStep()}
+                          onClick={() => setModal(!modal)}
+                          // onClick={() => handleModalAndStep()}
                         >
                           Select And Continue
                         </button>
