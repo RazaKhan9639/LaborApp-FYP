@@ -102,7 +102,7 @@
   color: #ac2132;
   border: 1px solid #5b6baa;
   background-color: #5b6baa;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 10px;
   font-size: 15px;
   font-weight: bold;
@@ -126,7 +126,7 @@
   padding: 10px;
   margin: 8px;
   border: 1px solid #5b6baa;
-  border-radius: 15px;
+  border-radius: 5px;
   color: #ac2132;
   text-transform: capitalize;
   cursor: pointer;
@@ -157,4 +157,7 @@
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+}
+.text-danger {
+  font-size: 25px;
 }

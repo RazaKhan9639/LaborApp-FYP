@@ -1,0 +1,97 @@
+.dateAndTimeContainer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.labourimg {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.labourimg h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.labourimg img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.calendar {
+  width: 100%;
+  height: 100%;
+
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time select {
+  width: 90%;
+  height: 80%;
+  color: #ac2132;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+.timeText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  display: flex;
+}
+.timeText p {
+  color: #000;
+  text-align: left;
+}
+.DetailSection1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.DetailSection1 p {
+  font-size: 20px;
+
+  font-weight: bolder;
+  color: #5b6baa;
+  text-align: center;
+
+  display: flex;
+}
+.DetailSection1 button {
+  width: 100%;
+  height: 100%;
+  background-color: #5b6baa;
+  color: #ac2132;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.DetailSection1 button:hover {
+  background-color: #ac2132;
+  color: #5b6baa;
+}

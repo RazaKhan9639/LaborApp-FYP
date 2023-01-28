@@ -188,7 +188,7 @@ const ServiceCategoriesPage = () => {
                 </div>
                 <div className="HowItWorksStep__Description">
                   Your Tasker arrives and gets the job done. Pay securely and
-                  leave a review, all through TaskRabbit.
+                  leave a review, all through LabourApp.
                 </div>
               </div>
             </div>

@@ -13,6 +13,10 @@ const getDefaultCart = () => {
 
 export const UserContextProvider = (props) => {
   const [cartItem, setCartItem] = useState(getDefaultCart());
+  const [step, setStep] = useState(0);
+  const [userData, setUserData] = useState([]);
+  const [finalData, setFinalData] = useState([]);
+  const [modal, setModal] = useState(false);
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -42,6 +46,14 @@ export const UserContextProvider = (props) => {
     removeFromCart,
     updateCartItemCount,
     getTotalCartAmount,
+    step,
+    setStep,
+    userData,
+    setUserData,
+    finalData,
+    setFinalData,
+    modal,
+    setModal,
   };
 
   return (
