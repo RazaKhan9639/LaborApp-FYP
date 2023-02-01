@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Calendar } from "react-date-range";
 import { addDays } from "date-fns";
 import format from "date-fns/format";
@@ -9,13 +9,37 @@ import "./dateTime.css";
 import { UserContext } from "../../context/UserContext";
 
 const DateAndTime = ({ image, name }) => {
-  const [date, setDate] = useState(new Date());
-  const [time, setTime] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  const [selectedTime, setSelectedTime] = useState(new Date());
-  const [selectedDateTime, setSelectedDateTime] = useState(new Date());
-  const [selectedDateTimeString, setSelectedDateTimeString] = useState("");
-  const { step, setStep } = useContext(UserContext);
+  const { step, setStep, date, setDate, time, setTime } =
+    useContext(UserContext);
+  const timeArray = [
+    "9:00 AM",
+    "9:30 AM",
+    "10:00 AM",
+    "10:30 AM",
+    "11:00 AM",
+    "11:30 AM",
+    "12:00 PM",
+    "12:30 PM",
+    "1:00 PM",
+    "1:30 PM",
+    "2:00 PM",
+    "2:30 PM",
+    "3:00 PM",
+    "3:30 PM",
+    "4:00 PM",
+    "4:30 PM",
+    "5:00 PM",
+    "5:30 PM",
+    "6:00 PM",
+  ];
+  const handleTime = (e) => {
+    setTime(e.target.value);
+  };
+  useEffect(() => {
+    setDate(new Date());
+    setTime("9:00 AM");
+  }, [setDate, setTime]);
+
   return (
     <>
       <div className="dateAndTimeContainer">
@@ -26,33 +50,23 @@ const DateAndTime = ({ image, name }) => {
           </div>
           <div className="calendar">
             <Calendar
-              date={new Date()}
-              onChange={(item) => console.log(item)}
+              date={date}
+              onChange={(item) => setDate(item)}
               minDate={new Date()}
-              maxDate={addDays(new Date(), 7)}
+              maxDate={addDays(new Date(), 6)}
             />
           </div>
+
           <div className="time">
-            <select name="Select Time" id="time Selection">
-              <option value="9:00 AM">9:00 AM</option>
-              <option value="9:30 AM">9:30 AM</option>
-              <option value="10:00 AM">10:00 AM</option>
-              <option value="10:30 AM">10:30 AM</option>
-              <option value="11:00 AM">11:00 AM</option>
-              <option value="11:30 AM">11:30 AM</option>
-              <option value="12:00 PM">12:00 PM</option>
-              <option value="12:30 PM">12:30 PM</option>
-              <option value="1:00 PM">1:00 PM</option>
-              <option value="1:30 PM">1:30 PM</option>
-              <option value="2:00 PM">2:00 PM</option>
-              <option value="2:30 PM">2:30 PM</option>
-              <option value="3:00 PM">3:00 PM</option>
-              <option value="3:30 PM">3:30 PM</option>
-              <option value="4:00 PM">4:00 PM</option>
-              <option value="4:30 PM">4:30 PM</option>
-              <option value="5:00 PM">5:00 PM</option>
-              <option value="5:30 PM">5:30 PM</option>
-              <option value="6:00 PM">6:00 PM</option>
+            <select
+              name="Select Time"
+              id="time Selection"
+              onChange={handleTime}
+              value={time}
+            >
+              {timeArray.map((time) => (
+                <option value={time}>{time}</option>
+              ))}
             </select>
           </div>
           <div className="timeText">
@@ -64,8 +78,20 @@ const DateAndTime = ({ image, name }) => {
           </div>
         </div>
         <div className="DetailSection1">
-          <p>Requested For:</p>
-          <p>Date And Time</p>
+          <p style={{ color: "#5b6baa" }}>Requested For:</p>
+          <p>
+            {format(date, "dd,MMM,yyyy")}{" "}
+            <span
+              style={{
+                color: "#5b6baa",
+                paddingLeft: "5px",
+                paddingRight: "5px",
+              }}
+            >
+              And
+            </span>
+            {time}
+          </p>
           <button className="RequestBtn" onClick={() => setStep(step + 2)}>
             {" "}
             Select and Continue

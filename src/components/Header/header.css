@@ -111,9 +111,12 @@ header {
 }
 /* Logo Style */
 .Logo {
-  width: 41px;
-  border: none;
-  border-radius: 5rem;
+  width: 50px;
+  height: 41px;
+  color: #cbd6e5;
+}
+.Logo:hover {
+  color: #ac2132;
 }
 @media screen and (max-height: 450px) {
   .overlay a {
