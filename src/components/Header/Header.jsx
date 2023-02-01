@@ -1,7 +1,8 @@
 import React from "react";
 import "./header.css";
-import logo_image from "./Labour_App_Logo.png";
+
 import { NavLink } from "react-router-dom";
+import { FaTools } from "react-icons/fa";
 
 function Header() {
   // const doc = document;
@@ -13,7 +14,7 @@ function Header() {
     <>
       <header>
         <NavLink className="logo" to="/#">
-          <img src={logo_image} className="Logo" alt="logo"></img>
+          <FaTools className="Logo" />
         </NavLink>
         <nav>
           <ul className="nav__links">
@@ -27,9 +28,9 @@ function Header() {
                   Services
                 </NavLink>
                 <span className="dropdown-content">
-                  <NavLink to="/home">Link 1</NavLink>
-                  <NavLink to="/home">Link 2</NavLink>
-                  <NavLink to="/home">Link 3</NavLink>
+                  <NavLink to="/home">Home </NavLink>
+                  <NavLink to="/home">Cleaning </NavLink>
+                  <NavLink to="/home">Car </NavLink>
                 </span>
               </span>
             </li>

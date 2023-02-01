@@ -26,7 +26,7 @@ import CarDetailing from "./components/Categories/CarDetailing";
 import PainterServices from "./components/Categories/PainterServices";
 import GoToTop from "./components/TopButton/GoToTop";
 import ServiceProvider from "./Pages/User/ServiceProvider";
-import Cart from "./Pages/Cart/Cart";
+
 import UserContextProvider from "./context/UserContext";
 import ServiceCategoriesPage from "./components/service_Categories_Page/ServiceCategoriesPage";
 import ProgressBar from "./components/User_Task_Progress_Bar/ProgressBar";
@@ -62,7 +62,7 @@ function App() {
               <Route path="/cardetailing" element={<CarDetailing />} />
               <Route path="/painting" element={<PainterServices />} />
               <Route path="/serviceprovider" element={<ServiceProvider />} />
-              <Route path="/cart" element={<Cart />} />
+
               <Route path="/ProgressBar" element={<ProgressBar />} />
               <Route
                 path="/cardetailing/:id"
