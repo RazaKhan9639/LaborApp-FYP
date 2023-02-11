@@ -5,7 +5,6 @@ import format from "date-fns/format";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import "./dateTime.css";
-// import img from "./1.jpg";
 import { UserContext } from "../../context/UserContext";
 
 const DateAndTime = ({ image, name }) => {
@@ -92,10 +91,12 @@ const DateAndTime = ({ image, name }) => {
             </span>
             {time}
           </p>
-          <button className="RequestBtn" onClick={() => setStep(step + 2)}>
-            {" "}
-            Select and Continue
-          </button>
+          {step && (
+            <button className="RequestBtn" onClick={() => setStep(step + 2)}>
+              {" "}
+              Select and Continue
+            </button>
+          )}
         </div>
       </div>
     </>

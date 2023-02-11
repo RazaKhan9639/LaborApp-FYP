@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Nadeem",
-    "ServiceName": "Barber",
+    "ServiceName": "Mechanic",
     "Contact": 1234567890,
     "Experience": "5",
     "city": "Boston",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Naeem",
-    "ServiceName": "Barber",
+    "ServiceName": "Cleaning",
     "Contact": 1234567890,
     "Experience": "5",
     "city": "Los Angeles",

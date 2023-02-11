@@ -1,0 +1,137 @@
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 0 20px;
+  border: 1px solid #ac2132;
+  border-radius: 3px;
+}
+.laborDetailSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nameDetail h2 {
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 0;
+  padding-top: 20px;
+}
+.nameDetail p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  text-align: left;
+}
+.laborProfileBtn {
+  outline: none;
+  border: none;
+  background-color: #ac2132;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.laborProfileBtn:hover {
+  background-color: #ac2132;
+  opacity: 0.8;
+}
+.laborDetailHeading {
+  display: flex;
+  flex-direction: column;
+}
+.laborDetailHeading h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+.laborDetailHeading p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  text-align: left;
+  padding-top: 10px;
+}
+.goBackBtnDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.goBackBtn {
+  outline: none;
+  border: none;
+  background-color: #ac2132;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.goBackBtn:hover {
+  background-color: #ac2132;
+  opacity: 0.8;
+}
+/* Review Section Styling */
+
+.reviewsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 0 20px;
+  border: 1px solid #ac2132;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+.reviewDetail {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+}
+.ReviewHeadingDiv {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 93%;
+}
+.ReviewHeadingDiv h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 10px;
+}
+.reviewrImageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.reviewDiv p {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  padding-top: 10px;
+  margin-left: 20px;
+}

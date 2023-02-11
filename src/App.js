@@ -30,6 +30,7 @@ import ServiceProvider from "./Pages/User/ServiceProvider";
 import UserContextProvider from "./context/UserContext";
 import ServiceCategoriesPage from "./components/service_Categories_Page/ServiceCategoriesPage";
 import ProgressBar from "./components/User_Task_Progress_Bar/ProgressBar";
+import LaborProfile from "./components/LabourProfilePage/LaborProfile";
 
 function App() {
   return (
@@ -63,12 +64,17 @@ function App() {
               <Route path="/painting" element={<PainterServices />} />
               <Route path="/serviceprovider" element={<ServiceProvider />} />
 
-              <Route path="/ProgressBar" element={<ProgressBar />} />
+              <Route path="/progressBar" element={<ProgressBar />} />
               <Route
                 path="/cardetailing/:id"
                 element={<ServiceCategoriesPage />}
               />
+              <Route
+                path="/progressBar/laborProfile"
+                element={<LaborProfile />}
+              />
             </Routes>
+
             <GoToTop />
             <Footer />
           </Router>
