@@ -21,7 +21,7 @@ const Star = ({ stars, reviews }) => {
     <section className="rating-section">
       <div className="icon-style">
         {ratingStar}
-        <p>{reviews} Customer reviews</p>
+        {reviews && <p className="reviews">{reviews} Customer reviews</p>}
       </div>
     </section>
   );

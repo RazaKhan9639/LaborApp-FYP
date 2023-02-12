@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import { UserContext } from "../../context/UserContext";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./ServiceProvider.css";
 import Star from "../../components/Rating/Star";
 import DateAndTime from "../../components/DateAndTime/DateAndTime";
@@ -8,6 +7,7 @@ import { Modal, ModalHeader, ModalBody } from "reactstrap";
 
 const Product = (props) => {
   const [modal, setModal] = useState(false);
+  const navigate = useNavigate();
   const {
     id,
     name,
@@ -21,13 +21,9 @@ const Product = (props) => {
     discount,
     reviews,
   } = props.data;
-
-  // const { cartItem, step, setStep, modal, setModal } = useContext(UserContext);
-  // const cartItemAmount = cartItem[id];
-  // const handleModalAndStep = () => {
-  //   setModal(!modal);
-  //   // setStep(step + 1);
-  // };
+  const handleClick = () => {
+    navigate("/progressBar/laborProfile", { state: { state: props.data } });
+  };
 
   return (
     <>
@@ -56,21 +52,21 @@ const Product = (props) => {
                   <div className="row">
                     <div className="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
                       <div className="bg-image hover-zoom ripple rounded ripple-surface">
-                        <Link to="#!">
-                          <div className="hover-overlay">
-                            <div
-                              className="mask"
-                              style={{
-                                backgroundColor: "rgba(253, 253, 253, 0.15)",
-                              }}
-                            />
-                            <img
-                              src={image}
-                              className="w-100"
-                              alt="ServiceProviderImage"
-                            />
-                          </div>
-                        </Link>
+                        <div className="hover-overlay">
+                          <div
+                            className="mask"
+                            style={{
+                              backgroundColor: "rgba(253, 253, 253, 0.15)",
+                            }}
+                          />
+                          <img
+                            src={image}
+                            className="w-100"
+                            alt="ServiceProviderImage"
+                            onClick={() => handleClick()}
+                            style={{ cursor: "pointer" }}
+                          />
+                        </div>
                       </div>
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-6">
@@ -152,7 +148,6 @@ const Product = (props) => {
                           id="cart_btn"
                           type="button"
                           onClick={() => setModal(!modal)}
-                          // onClick={() => handleModalAndStep()}
                         >
                           Select And Continue
                         </button>
