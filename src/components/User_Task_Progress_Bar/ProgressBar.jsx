@@ -20,9 +20,8 @@ const ProgressBar = () => {
       case 1:
         return <Shop />;
 
-      case 2:
+      case 3:
         return <ConfirmDetail />;
-
       default:
         return "Not Page Found";
     }

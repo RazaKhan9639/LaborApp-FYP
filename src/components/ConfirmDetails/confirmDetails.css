@@ -1,0 +1,55 @@
+.confirm-details-container {
+  max-width: 1024;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.profile-details-section {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.profile-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.service-details {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.date-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+.location-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+/* .s-locatio-details {
+  margin-left: 55px;
+} */
+
+.taskType-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+.EditTask {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}

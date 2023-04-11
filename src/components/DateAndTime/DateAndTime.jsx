@@ -93,7 +93,6 @@ const DateAndTime = ({ image, name }) => {
           </p>
           {step && (
             <button className="RequestBtn" onClick={() => setStep(step + 2)}>
-              {" "}
               Select and Continue
             </button>
           )}
