@@ -5,6 +5,7 @@ import "./describeTask.css";
 
 const DescribeTask = () => {
   const { step, setStep } = useContext(UserContext);
+  const { location, setLocation } = useContext(UserContext);
   return (
     <>
       <div className="describeTaskContainer">
@@ -18,6 +19,7 @@ const DescribeTask = () => {
                 type="text"
                 placeholder="Enter Your Location Here"
                 className="InputLocation"
+                onChange={(e) => setLocation(e.target.value)}
               />
               <input
                 type="Text"
@@ -26,9 +28,11 @@ const DescribeTask = () => {
               />
             </div>
           </div>
-          <div className="addressConfirmationBtn">
-            <button className="confirmAddress">Continue</button>
-          </div>
+          {location.length > 5 && (
+            <div className="addressConfirmationBtn">
+              <button className="confirmAddress">Continue</button>
+            </div>
+          )}
         </div>
         {/* 2nd Section */}
         <div className="TaskOptionWrapper">

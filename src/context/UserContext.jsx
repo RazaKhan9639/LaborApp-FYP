@@ -9,6 +9,7 @@ export const UserContextProvider = (props) => {
   const [modal, setModal] = useState(false);
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState("9.00 AM");
+  const [location, setLocation] = useState("");
 
   const contextValue = {
     step,
@@ -23,6 +24,8 @@ export const UserContextProvider = (props) => {
     setDate,
     time,
     setTime,
+    location,
+    setLocation,
   };
 
   return (
