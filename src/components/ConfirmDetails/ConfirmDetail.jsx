@@ -78,16 +78,21 @@ const ConfirmDetail = () => {
           </div>
         </div>
       </div>
+      /* Payment Details Section */
       <div className="payment-details-section">
         <div className="payment-detail">
-          <h3>Payment Details</h3>
-          <div className="payment-method">
-            <p>Payment Method Icon</p>
-            <p>Payment Method</p>
+          <h4 style={{ color: "#5b6baa" }}>Payment Details</h4>
+          <div className="payment-details">
+            <p>Service Price</p>
+            <p>Service Tax</p>
+            <p>Service Total</p>
           </div>
-          <div className="payment-amount">
-            <p>Payment Amount Icon</p>
-            <p>Payment Amount</p>
+        </div>
+        <div className="payment-method">
+          <h4 style={{ color: "#5b6baa" }}>Payment Method</h4>
+          <div className="payment-method-details">
+            <p>Payment Method</p>
+            <p>Payment Status</p>
           </div>
         </div>
       </div>
