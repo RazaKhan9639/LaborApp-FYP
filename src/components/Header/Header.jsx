@@ -44,6 +44,9 @@ function Header() {
               <NavLink to="/faqs">FAQs</NavLink>
             </li>
             <li>
+              <NavLink to="/orders">Your Order</NavLink>
+            </li>
+            <li>
               <NavLink to="/contact">Contact Us</NavLink>
             </li>
           </ul>

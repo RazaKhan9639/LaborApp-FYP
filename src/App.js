@@ -31,6 +31,7 @@ import UserContextProvider from "./context/UserContext";
 import ServiceCategoriesPage from "./components/service_Categories_Page/ServiceCategoriesPage";
 import ProgressBar from "./components/User_Task_Progress_Bar/ProgressBar";
 import LaborProfile from "./components/LabourProfilePage/LaborProfile";
+import OrdersComponent from "./components/Orders/Orders";
 
 function App() {
   return (
@@ -73,6 +74,8 @@ function App() {
                 path="/progressBar/laborProfile"
                 element={<LaborProfile />}
               />
+              <Route path="/orders" element={<OrdersComponent/>}/>
+              
             </Routes>
 
             <GoToTop />
