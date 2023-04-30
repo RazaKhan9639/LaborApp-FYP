@@ -12,7 +12,7 @@ const ConfirmDetail = () => {
           <h4
             style={{ margin: "auto 0", color: "#5b6baa", paddingLeft: "10px" }}
           >
-            Service Name
+            Ac Repairing
           </h4>
           <p style={{ color: "black", fontSize: "1rem", margin: "auto" }}>
             Nadeem
@@ -39,7 +39,7 @@ const ConfirmDetail = () => {
                 height: "2rem",
               }}
             />
-            <p>Service Date</p>
+            <p>12/5/2023</p>
           </div>
           <div className="location-details">
             <ImLocation2
@@ -50,7 +50,7 @@ const ConfirmDetail = () => {
                 height: "2rem",
               }}
             />
-            <p className="s-locatio-details">Service Location</p>
+            <p className="s-locatio-details">House No 3,street No 5, wahdat Road Lahore.</p>
           </div>
           <div className="taskType-details">
             <FaTasks
@@ -62,7 +62,7 @@ const ConfirmDetail = () => {
               }}
             />
 
-            <p>Service Task Type</p>
+            <p>medium</p>
           </div>
           <div className="EditTask">
             <FiEdit
@@ -78,24 +78,27 @@ const ConfirmDetail = () => {
           </div>
         </div>
       </div>
-      /* Payment Details Section */
+      
       <div className="payment-details-section">
         <div className="payment-detail">
           <h4 style={{ color: "#5b6baa" }}>Payment Details</h4>
           <div className="payment-details">
-            <p>Service Price</p>
-            <p>Service Tax</p>
-            <p>Service Total</p>
+            <p><span style={{color:'#ac2132',fontWeight:'600'}}>Service Price:</span> 2000 Rs</p>
+            <p><span style={{color:'#ac2132',fontWeight:'600'}}>Service Tax:</span> 500 Rs </p>
+            <p><span style={{color:'#ac2132',fontWeight:'600'}}>Sub Total:</span> 2500 Rs</p>
           </div>
         </div>
         <div className="payment-method">
           <h4 style={{ color: "#5b6baa" }}>Payment Method</h4>
           <div className="payment-method-details">
-            <p>Payment Method</p>
-            <p>Payment Status</p>
+            <p>Cash In Hands </p>
+            
           </div>
+          
         </div>
+        
       </div>
+      <button className="placeOrderBtn">Place Order</button>
     </div>
   );
 };
