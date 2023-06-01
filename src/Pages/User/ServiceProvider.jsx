@@ -1,6 +1,6 @@
 import React from "react";
 import Data from "../../User.json";
-import User from "./User";
+import User from "./User"; // User.jsx
 import "./ServiceProvider.css";
 import ServiceProviderLastSection from "./ServiceProviderLastSection";
 

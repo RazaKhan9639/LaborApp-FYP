@@ -32,55 +32,57 @@ import ServiceCategoriesPage from "./components/service_Categories_Page/ServiceC
 import ProgressBar from "./components/User_Task_Progress_Bar/ProgressBar";
 import LaborProfile from "./components/LabourProfilePage/LaborProfile";
 import OrdersComponent from "./components/Orders/Orders";
+import { AuthContextProvider } from "./context/AuthContext";
 
 function App() {
   return (
     <>
       <div className="App">
         <UserContextProvider>
-          <Router>
-            <Header />
-            <Routes>
-              <Route path="/" element={<SignInOutContainer />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<SignUp />} />
-              <Route path="*" element={<h1>404 Not Found</h1>} />
-              <Route path="/home" element={<Home />} />
+          <AuthContextProvider>
+            <Router>
+              <Header />
+              <Routes>
+                <Route path="/" element={<SignInOutContainer />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="*" element={<h1>404 Not Found</h1>} />
+                <Route path="/home" element={<Home />} />
 
-              <Route path="/faqs" element={<FAQS data={FAQSData} />} />
-              <Route path="/about" element={<About />} />
+                <Route path="/faqs" element={<FAQS data={FAQSData} />} />
+                <Route path="/about" element={<About />} />
 
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/ACcategories" element={<Categories />} />
-              <Route path="/carservices" element={<CarServices />} />
-              <Route path="/plumbing" element={<PlumbingServices />} />
-              <Route path="/pestcontrol" element={<PestControlServices />} />
-              <Route path="/homeappliance" element={<HomeAppliance />} />
-              <Route path="/handyman" element={<Handyman />} />
-              <Route path="/homecleaning" element={<HomeCleaning />} />
-              <Route path="/geyser" element={<Geyser />} />
-              <Route path="/electrician" element={<Electrician />} />
-              <Route path="/carpenter" element={<Carpenter />} />
-              <Route path="/cardetailing" element={<CarDetailing />} />
-              <Route path="/painting" element={<PainterServices />} />
-              <Route path="/serviceprovider" element={<ServiceProvider />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/ACcategories" element={<Categories />} />
+                <Route path="/carservices" element={<CarServices />} />
+                <Route path="/plumbing" element={<PlumbingServices />} />
+                <Route path="/pestcontrol" element={<PestControlServices />} />
+                <Route path="/homeappliance" element={<HomeAppliance />} />
+                <Route path="/handyman" element={<Handyman />} />
+                <Route path="/homecleaning" element={<HomeCleaning />} />
+                <Route path="/geyser" element={<Geyser />} />
+                <Route path="/electrician" element={<Electrician />} />
+                <Route path="/carpenter" element={<Carpenter />} />
+                <Route path="/cardetailing" element={<CarDetailing />} />
+                <Route path="/painting" element={<PainterServices />} />
+                <Route path="/serviceprovider" element={<ServiceProvider />} />
 
-              <Route path="/progressBar" element={<ProgressBar />} />
-              <Route
-                path="/cardetailing/:id"
-                element={<ServiceCategoriesPage />}
-              />
-              <Route
-                path="/progressBar/laborProfile"
-                element={<LaborProfile />}
-              />
-              <Route path="/orders" element={<OrdersComponent/>}/>
-              
-            </Routes>
+                <Route path="/progressBar" element={<ProgressBar />} />
+                <Route
+                  path="/ACcategories/:id"
+                  element={<ServiceCategoriesPage />}
+                />
+                <Route
+                  path="/progressBar/laborProfile"
+                  element={<LaborProfile />}
+                />
+                <Route path="/orders" element={<OrdersComponent />} />
+              </Routes>
 
-            <GoToTop />
-            <Footer />
-          </Router>
+              <GoToTop />
+              <Footer />
+            </Router>
+          </AuthContextProvider>
         </UserContextProvider>
       </div>
     </>

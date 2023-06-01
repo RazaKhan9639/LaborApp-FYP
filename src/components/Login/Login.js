@@ -10,11 +10,14 @@ import {
   Typography,
   Link,
 } from "@mui/material";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 const Login = ({ handleChange }) => {
+  const navigate = useNavigate();
   const paperStyle = {
     padding: 20,
     height: "88vh",
@@ -48,13 +51,37 @@ const Login = ({ handleChange }) => {
     remember: false,
   };
 
-  const onSubmit = (value, props) => {
-    console.log(value);
-    console.log(props);
-    setTimeout(() => {
-      props.resetForm();
-      props.setSubmitting(false);
-    }, 3000);
+  // const onSubmit = (value, props) => {
+  //   console.log(value);
+  //   console.log(props);
+  //   setTimeout(() => {
+  //     props.resetForm();
+  //     props.setSubmitting(false);
+  //   }, 3000);
+  // };
+
+  const onSubmit = async (values, { setSubmitting }) => {
+    try {
+      // Make the API call
+      const response = await axios.post(
+        "http://localhost:8000/api/auth/login",
+        values
+      );
+
+      // Process the response
+      console.log(response.data); // Assuming the API returns a token or user data
+      localStorage.setItem("token", response.data.token);
+
+      localStorage.setItem("user", JSON.stringify(response.data.user));
+
+      setSubmitting(false);
+
+      // Navigate to the home page
+      navigate("/home");
+    } catch (error) {
+      console.error(error);
+      // Handle the error, e.g., show an error message
+    }
   };
 
   const validationSchema = Yup.object().shape({
@@ -138,3 +165,69 @@ const Login = ({ handleChange }) => {
   );
 };
 export default Login;
+
+// import axios from "axios";
+// import { useContext, useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { AuthContext } from "../../context/AuthContext";
+// import "./login.css";
+
+// const Login = () => {
+//   const [credentials, setCredentials] = useState({
+//     email: undefined,
+//     password: undefined,
+//   });
+
+//   const { loading, error, dispatch } = useContext(AuthContext);
+
+//   const navigate = useNavigate();
+
+//   const handleChange = (e) => {
+//     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+//   };
+
+//   const handleClick = async (e) => {
+//     e.preventDefault();
+//     dispatch({ type: "LOGIN_START" });
+//     try {
+//       const res = await axios.post(
+//         "http://localhost:8000/api/auth/login",
+//         credentials
+//       );
+//       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+//       localStorage.setItem("token", res.data.token);
+//       localStorage.setItem("user", JSON.stringify(res.data.details));
+//       console.log(res.data.details);
+//       navigate("/home");
+//     } catch (err) {
+//       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+//     }
+//   };
+
+//   return (
+//     <div className="login">
+//       <div className="lContainer">
+//         <input
+//           type="text"
+//           placeholder="email"
+//           id="email"
+//           onChange={handleChange}
+//           className="lInput"
+//         />
+//         <input
+//           type="password"
+//           placeholder="password"
+//           id="password"
+//           onChange={handleChange}
+//           className="lInput"
+//         />
+//         <button disabled={loading} onClick={handleClick} className="lButton">
+//           Login
+//         </button>
+//         {error && <span>{error.message}</span>}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Login;

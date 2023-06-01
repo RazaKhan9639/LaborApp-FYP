@@ -9,16 +9,14 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { FormHelperText } from "@mui/material";
 
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const SignUp = () => {
+  const navigate = useNavigate();
   const paperStyle = {
     padding: 20,
     height: "95vh",
@@ -36,17 +34,6 @@ const SignUp = () => {
     color: "#FFFFFF",
     backgroundColor: "#5B6BAA",
   };
-  const radioStyle = {
-    // color: "#5B6BAA",
-    color: "#AC2132",
-  };
-  const formControlStyle = {
-    marginTop: 5,
-  };
-  const checkBoxStyle = {
-    paddingTop: 10,
-    fontSize: 14,
-  };
 
   const headingStyle = {
     color: "#3A396B",
@@ -55,43 +42,54 @@ const SignUp = () => {
 
   const initialValues = {
     name: "",
+    username: "",
     email: "",
-    gender: "",
-    phoneNumber: "",
+    number: "",
     password: "",
-    confirmPassword: "",
-    termsAndConditions: false,
   };
 
-  const onSubmit = (values, props) => {
-    console.log(values);
-    console.log(props);
-    setTimeout(() => {
-      props.resetForm();
-      props.setSubmitting(false);
-    }, 3000);
-  };
+  // const onSubmit = (values, props) => {
+  //   console.log(values);
+  //   console.log(props);
+  //   setTimeout(() => {
+  //     props.resetForm();
+  //     props.setSubmitting(false);
+  //   }, 3000);
+  // };
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().min(3, "It's too Short").required("Required"),
+    username: Yup.string().min(3, "It's too Short").required("Required"),
     email: Yup.string().email("Invalid email format").required("Required"),
-    phoneNumber: Yup.number()
+    number: Yup.string()
       .typeError("Enter Valid Phone Number")
-      .required("Required"),
-    gender: Yup.string()
-      .oneOf(["male", "female"], "Required")
       .required("Required"),
     password: Yup.string()
       .min(8, "Password minimum Length should be 8")
       .required("Required"),
-    confirmPassword: Yup.string()
-      .oneOf([Yup.ref("password")], "Password Not Matched")
-      .required("Required"),
-    termsAndConditions: Yup.string().oneOf(
-      ["true"],
-      "Accept Terms & Conditions"
-    ),
   });
+
+  const onSubmit = async (values, { setSubmitting }) => {
+    try {
+      // Make the API call
+      const response = await axios.post(
+        "http://localhost:8000/register/user",
+        values
+      );
+
+      console.log(response.data);
+
+      setSubmitting(false);
+
+      // Redirect to the desired page, e.g., login page
+
+      navigate("/");
+
+      alert("You have successfully registered");
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <>
@@ -129,6 +127,19 @@ const SignUp = () => {
                   as={TextField}
                   id="standard-basic"
                   variant="standard"
+                  label="UserName"
+                  name="username"
+                  placeholder="Enter Your username"
+                  helperText={<ErrorMessage name="username" />}
+                  fullWidth
+                  required
+                  type="text"
+                />
+
+                <Field
+                  as={TextField}
+                  id="standard-basic"
+                  variant="standard"
                   label="Email"
                   name="email"
                   placeholder="Enter Your Email"
@@ -146,37 +157,11 @@ const SignUp = () => {
                   placeholder="Enter Your Phone Number"
                   fullWidth
                   required
-                  name="phoneNumber"
-                  helperText={<ErrorMessage name="phoneNumber" />}
+                  name="number"
+                  helperText={<ErrorMessage name="number" />}
                   type="text"
                 />
-                <FormControl style={formControlStyle}>
-                  <FormLabel id="demo-radio-buttons-group-label">
-                    Gender
-                  </FormLabel>
-                  <Field
-                    as={RadioGroup}
-                    aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="male"
-                    // name="radio-buttons-group"
-                    name="gender"
-                    style={{ display: "initial" }}
-                  >
-                    <FormControlLabel
-                      value="female"
-                      control={<Radio style={radioStyle} />}
-                      label="Female"
-                    />
-                    <FormControlLabel
-                      value="male"
-                      control={<Radio style={radioStyle} />}
-                      label="Male"
-                    />
-                  </Field>
-                </FormControl>
-                <FormHelperText>
-                  <ErrorMessage name="gender" />
-                </FormHelperText>
+
                 <Field
                   as={TextField}
                   id="standard-basic"
@@ -189,32 +174,7 @@ const SignUp = () => {
                   required
                   type="password"
                 />
-                <Field
-                  as={TextField}
-                  id="standard-basic"
-                  variant="standard"
-                  label="Confirm Password"
-                  name="confirmPassword"
-                  helperText={<ErrorMessage name="confirmPassword" />}
-                  placeholder="Confirm Your Password"
-                  fullWidth
-                  required
-                  type="password"
-                />
-                <FormControlLabel
-                  control={
-                    <Field
-                      as={Checkbox}
-                      name="termsAndConditions"
-                      style={radioStyle}
-                    />
-                  }
-                  label="Accept Term and Conditions."
-                  style={checkBoxStyle}
-                />
-                <FormHelperText>
-                  <ErrorMessage name="termsAndConditions" />
-                </FormHelperText>
+
                 <Button
                   type="submit"
                   color="primary"

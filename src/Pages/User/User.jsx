@@ -9,7 +9,6 @@ const Product = (props) => {
   const [modal, setModal] = useState(false);
   const navigate = useNavigate();
   const {
-    id,
     name,
     image,
     amount,

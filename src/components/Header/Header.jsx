@@ -1,14 +1,12 @@
 import React from "react";
 import "./header.css";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { FaTools } from "react-icons/fa";
 
 function Header() {
-  // const doc = document;
-  // const menuOpen = doc.querySelector(".menu");
-  // const menuClose = doc.querySelector(".close");
-  // const overlay = doc.querySelector(".overlay");
+  const location = useLocation();
+  const isLoggedIn = location.pathname === "/home";
 
   return (
     <>
@@ -24,7 +22,7 @@ function Header() {
             <li>
               {/* <a href="#">Services</a> */}
               <span className="dropdown">
-                <NavLink to="/#" class="dropbtn">
+                <NavLink to="/progressbar" class="dropbtn">
                   Services
                 </NavLink>
                 <span className="dropdown-content">
@@ -51,9 +49,16 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <NavLink className="cta" to="/#">
-          Login/SignUp
-        </NavLink>
+        {isLoggedIn ? (
+          <NavLink className="cta" to="/#">
+            Logout
+          </NavLink>
+        ) : (
+          <NavLink className="cta" to="/#">
+            Login/signUp
+          </NavLink>
+        )}
+
         <NavLink to="/#" className="cta">
           Become Labor
         </NavLink>
