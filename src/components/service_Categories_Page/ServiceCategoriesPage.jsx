@@ -27,7 +27,7 @@ const ServiceCategoriesPage = () => {
               Jack (and) Jill of all trades can handle most of your minor home
               repair!
             </p>
-            <NavLink to="/#" className="BookNowBtn">
+            <NavLink to="/progressbar" className="BookNowBtn">
               Book Now
             </NavLink>
           </div>

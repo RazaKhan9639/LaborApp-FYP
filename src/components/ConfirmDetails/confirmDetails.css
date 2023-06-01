@@ -55,31 +55,33 @@
   justify-content: flex-start;
   margin-bottom: 10px;
 }
-.payment-details{
+.payment-details {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border: 1px solid #e0e0e0;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
 }
-.payment-details p{
+.payment-details p {
   margin-bottom: 10px;
   text-align: center;
   font-size: 16px;
   font-weight: 600;
   color: black;
   padding: 10px;
-  
 }
-.payment-details p span{
+.payment-details p span {
   color: #ac2132;
   font-size: 18px;
   font-weight: 600;
   padding-right: 20px;
 }
 
-.payment-method{
+.payment-method {
   display: flex;
   flex-direction: column;
   border: 1px solid #e0e0e0;
@@ -87,16 +89,14 @@
   margin-bottom: 20px;
   border-radius: 5px;
 }
-.payment-method-details p{
+.payment-method-details p {
   margin-bottom: 10px;
   color: black;
   font-size: 16px;
   font-weight: 600;
-  
 }
 
-
-.placeOrderBtn{
+.placeOrderBtn {
   margin-left: 46%;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -108,7 +108,7 @@
   font-weight: 600;
   border: none;
 }
-.placeOrderBtn:hover{
+.placeOrderBtn:hover {
   background-color: #5a5b6a;
   color: #fff;
   border: 1px solid #ac2132;

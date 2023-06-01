@@ -50,7 +50,7 @@ const AC_Categories = (props) => {
                   <div className="top-services-inner">
                     <ul className="topservices-ul no-disc">
                       <li className="tsu-item">
-                        <a href="/serviceprovider">{item.Categories}</a>
+                        <a href="/ACcategories/12">{item.Categories}</a>
                       </li>
                     </ul>
                   </div>

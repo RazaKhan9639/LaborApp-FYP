@@ -4,7 +4,15 @@ import { AiFillCalendar } from "react-icons/ai";
 import { ImLocation2 } from "react-icons/im";
 import { FaTasks } from "react-icons/fa";
 import { FiEdit } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 const ConfirmDetail = () => {
+  const navigate = useNavigate();
+  const handleOrderClick = () => {
+    console.log("Order Placed");
+    alert("Order Placed we are redirecting you to order page");
+    navigate("/orders");
+  };
+
   return (
     <div className="confirm-details-container">
       <div className="profile-details-section">
@@ -50,7 +58,9 @@ const ConfirmDetail = () => {
                 height: "2rem",
               }}
             />
-            <p className="s-locatio-details">House No 3,street No 5, wahdat Road Lahore.</p>
+            <p className="s-locatio-details">
+              House No 3,street No 5, wahdat Road Lahore.
+            </p>
           </div>
           <div className="taskType-details">
             <FaTasks
@@ -78,27 +88,41 @@ const ConfirmDetail = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="payment-details-section">
         <div className="payment-detail">
           <h4 style={{ color: "#5b6baa" }}>Payment Details</h4>
           <div className="payment-details">
-            <p><span style={{color:'#ac2132',fontWeight:'600'}}>Service Price:</span> 2000 Rs</p>
-            <p><span style={{color:'#ac2132',fontWeight:'600'}}>Service Tax:</span> 500 Rs </p>
-            <p><span style={{color:'#ac2132',fontWeight:'600'}}>Sub Total:</span> 2500 Rs</p>
+            <p>
+              <span style={{ color: "#ac2132", fontWeight: "600" }}>
+                Service Price:
+              </span>{" "}
+              2000 Rs
+            </p>
+            <p>
+              <span style={{ color: "#ac2132", fontWeight: "600" }}>
+                Service Tax:
+              </span>{" "}
+              500 Rs{" "}
+            </p>
+            <p>
+              <span style={{ color: "#ac2132", fontWeight: "600" }}>
+                Sub Total:
+              </span>{" "}
+              2500 Rs
+            </p>
           </div>
         </div>
         <div className="payment-method">
           <h4 style={{ color: "#5b6baa" }}>Payment Method</h4>
           <div className="payment-method-details">
             <p>Cash In Hands </p>
-            
           </div>
-          
         </div>
-        
       </div>
-      <button className="placeOrderBtn">Place Order</button>
+      <button className="placeOrderBtn" onClick={handleOrderClick}>
+        Place Order
+      </button>
     </div>
   );
 };
